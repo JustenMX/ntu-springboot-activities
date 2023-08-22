@@ -22,7 +22,30 @@ If you're a fellow student or developer interested in Spring Boot, feel free to 
 git clone https://github.com/JustenMX/nut-springboot-activities
 ```
 
-Each activity is stored in its respective folder, and you can navigate to each activity to find the Spring Boot files and README with specific instructions.
+Each activity is stored in its respective folder, and you can navigate to each activity to find the Spring Boot files and BRIEF.md with specific instructions.
+
+### Accessing Activity Instructions
+
+Each activity is organized within its respective folder. To find the instructions for each activity, follow these steps:
+
+1. Locate the `resources` folder in the project directory.
+
+2. Inside the resources folder, you will find the `BRIEF.md` file.
+
+3. Open the `BRIEF.md` file to access detailed instructions and guidelines for the activity.
+
+Here's a quick example:
+
+Suppose you want to access the instructions for the "springboot-workshop." You would follow this path:
+
+```
+springboot-workshop/
+└── src/
+    └── main/
+        └── resources/
+            └── BRIEF.md
+
+```
 
 ## Activities List
 

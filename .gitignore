@@ -1,0 +1,31 @@
+# Maven build directory
+target/
+
+# Gradle build directory
+build/
+
+# Spring Boot log files
+logs/
+
+# IDE-specific files
+.idea/
+.vscode/
+*.iml
+
+# macOS system files
+.DS_Store
+
+# Eclipse project files
+.settings/
+.project
+.classpath
+
+# IntelliJ IDEA project files
+*.ipr
+*.iws
+
+# Gradle wrapper properties
+gradle-wrapper.properties
+
+# Spring Boot properties file
+application.properties

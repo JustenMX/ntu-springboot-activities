@@ -52,8 +52,8 @@ springboot-workshop/
 Here is a list of activities included in this repository:
 
 1. [Activity 1: Introduction to Spring Boot](/activity1)
-<!-- 2. [Activity 2: Maven](/activity2)
-2. [Activity 3: Components and Annotations](/activity3)
+2. [Activity 2: Maven](/activity2)
+<!-- 2. [Activity 3: Components and Annotations](/activity3)
 3. [Activity 4: REST Controller](/activity4)
 4. [Activity 5: Java Persistent API](/activity5)
 5. [Activity 6: Test-Driven Development](/activity6) -->

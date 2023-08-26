@@ -10,6 +10,15 @@ import sg.edu.ntu.springmaven.POJO.Product;
 public class ProductRepository {
     private List<Product> productList = new ArrayList<>();
 
+    public ProductRepository() {
+        productList.add(new Product("1", "Product A", 10.0, "Description A"));
+        productList.add(new Product("2", "Product B", 15.0, "Description B"));
+        productList.add(new Product("3", "Product C", 20.0, "Description C"));
+        productList.add(new Product("4", "Product D", 25.0, "Description D"));
+        productList.add(new Product("5", "Product E", 30.0, "Description E"));
+
+    }
+
     /*
      * READ ALL
      */

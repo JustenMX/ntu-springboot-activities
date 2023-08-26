@@ -43,7 +43,8 @@ springboot-workshop/
 └── src/
     └── main/
         └── resources/
-            └── BRIEF.md
+            └── documentation/
+                └── BRIEF.md
 
 ```
 
@@ -53,17 +54,14 @@ Here is a list of activities included in this repository:
 
 1. [Activity 1: Introduction to Spring Boot](/activity1)
 2. [Activity 2: Maven](/activity2)
-<!-- 2. [Activity 3: Components and Annotations](/activity3)
+<!-- 3. [Activity 3: Components and Annotations](/activity3)
 3. [Activity 4: REST Controller](/activity4)
 4. [Activity 5: Java Persistent API](/activity5)
 5. [Activity 6: Test-Driven Development](/activity6) -->
 
 In addition to the course exercises, I've also included some of the projects I've independently developed.
 
-> Work In Progress
-
-<!-- 8. [Project 1: One](/)
-9. [Project 2: Two](/) -->
+1. [Project 1: Expenses RESTful API](/simple-expenses)
 
 Please click on the links to navigate to each activity's folder and explore the related materials.
 

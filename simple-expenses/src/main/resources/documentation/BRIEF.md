@@ -1,8 +1,8 @@
-- Create an Expenses API using Java Spring Boot - Simple Expenses.
-- The application should run on port 9090.
-- Use an ArrayList to store the data.
-- It should have the endpoints for Create, Get One, Get All, Update, Delete
-- Test that your endpoints can perform all the CRUD operations and it returns the appropriate HTTP status code.
+- [x] Create an Expenses API using Java Spring Boot - Simple Expenses.
+- [x] The application should run on port 9090.
+- [x] Use an ArrayList to store the data.
+- [ ] It should have the endpoints for Create, Get One, Get All, Update, Delete
+- [ ] Test that your endpoints can perform all the CRUD operations and it returns the appropriate HTTP status code.
 
 Expenses POJO fields:
 private String id;

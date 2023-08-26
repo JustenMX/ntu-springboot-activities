@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import sg.edu.ntu.simpleexpenses.POJO.ExpenseCategory;
 import sg.edu.ntu.simpleexpenses.POJO.Expenses;
 import sg.edu.ntu.simpleexpenses.service.ExpensesService;
 
@@ -43,8 +45,20 @@ public class ExpensesController {
     }
 
     /*
+     * GET EXPENSES BY CATEGORY
+     */
+    @GetMapping("/category")
+    public List<Expenses> getExpensesByCategory(
+            @RequestParam(required = false) ExpenseCategory category,
+            @RequestParam(required = false) Double minAmount,
+            @RequestParam(required = false) Double maxAmount) {
+        return expensesService.getExpensesByCategory(category, minAmount, maxAmount);
+    }
+
+    /*
      * CREATE
      */
+
     @PostMapping
     public Expenses addExpense(@RequestBody Expenses newExpense) {
         return expensesService.addExpense(newExpense);

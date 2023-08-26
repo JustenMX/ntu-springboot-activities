@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import sg.edu.ntu.simpleexpenses.POJO.ExpenseCategory;
 import sg.edu.ntu.simpleexpenses.POJO.Expenses;
 import sg.edu.ntu.simpleexpenses.repository.ExpensesRepository;
 
@@ -30,6 +31,13 @@ public class ExpensesService {
      */
     public Expenses getExpense(String id) {
         return expensesRepository.getExpense(id);
+    }
+
+    /*
+     * GET EXPENSES BY CATEGORY
+     */
+    public List<Expenses> getExpensesByCategory(ExpenseCategory category, Double minAmount, Double maxAmount) {
+        return expensesRepository.getExpensesByCategory(category, minAmount, maxAmount);
     }
 
     /*

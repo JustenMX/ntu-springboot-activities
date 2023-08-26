@@ -46,6 +46,27 @@ public class ExpensesRepository {
     }
 
     /*
+     * GET EXPENSES BY CATEGORY
+     */
+    public List<Expenses> getExpensesByCategory(
+            ExpenseCategory category,
+            Double minAmount,
+            Double maxAmount) {
+        List<Expenses> filteredExpenses = new ArrayList<>();
+
+        for (Expenses expense : expenseList) {
+            boolean categoryMatch = category == null || expense.getCategory().equals(category);
+            boolean minAmountMatch = minAmount == null || expense.getAmount() >= minAmount;
+            boolean maxAmountMatch = maxAmount == null || expense.getAmount() <= maxAmount;
+
+            if (categoryMatch && minAmountMatch && maxAmountMatch) {
+                filteredExpenses.add(expense);
+            }
+        }
+        return filteredExpenses;
+    }
+
+    /*
      * CREATE
      */
     public Expenses addExpense(Expenses newExpense) {

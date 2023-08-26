@@ -28,29 +28,29 @@ public class ExpensesService {
     /*
      * GET ONE
      */
-    public Expenses getExpenses(String id) {
+    public Expenses getExpense(String id) {
         return expensesRepository.getExpense(id);
     }
 
     /*
      * CREATE
      */
-    public Expenses addExpenses(Expenses newExpenses) {
-        return expensesRepository.addExpenses(newExpenses);
+    public Expenses addExpense(Expenses newExpense) {
+        return expensesRepository.addExpense(newExpense);
     }
 
     /*
      * UPDATE
      */
-    public Expenses updateExpenses(Expenses updateExpenses) {
-        return expensesRepository.updateExpenses(updateExpenses);
+    public Expenses updateExpense(Expenses updateExpense) {
+        return expensesRepository.updateExpense(updateExpense);
     }
 
     /*
      * DELETE
      */
-    public List<Expenses> deleteExpenses(String id) {
-        return expensesRepository.deleteExpenses(id);
+    public List<Expenses> deleteExpense(String id) {
+        return expensesRepository.deleteExpense(id);
     }
 
 }

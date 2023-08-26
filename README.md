@@ -30,7 +30,7 @@ Each activity is organized within its respective folder. To find the instruction
 
 1. Locate the `resources` folder in the project directory.
 
-2. Inside the resources folder, you will find the `BRIEF.md` file.
+2. Inside the resources/documentation folder, you will find the `BRIEF.md` file.
 
 3. Open the `BRIEF.md` file to access detailed instructions and guidelines for the activity.
 

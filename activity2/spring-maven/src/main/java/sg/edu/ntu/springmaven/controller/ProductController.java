@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import sg.edu.ntu.springmaven.POJO.Product;
-import sg.edu.ntu.springmaven.exception.ProductNotFoundException;
 import sg.edu.ntu.springmaven.service.ProductService;
 
 @RestController
@@ -34,11 +33,8 @@ public class ProductController {
 
     @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProducts() {
-        try {
-            return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
-        } catch (ProductNotFoundException exception) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
+
     }
 
     /*
@@ -48,12 +44,7 @@ public class ProductController {
 
     @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable String id) {
-        try {
-            return new ResponseEntity<>(productService.getProduct(id), HttpStatus.OK);
-        } catch (ProductNotFoundException exception) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-
+        return new ResponseEntity<>(productService.getProduct(id), HttpStatus.OK);
     }
 
     /*
@@ -63,11 +54,8 @@ public class ProductController {
 
     @PutMapping("/products/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable String id, @RequestBody Product updatedProduct) {
-        try {
-            return new ResponseEntity<>(productService.updateProduct(updatedProduct), HttpStatus.OK);
-        } catch (ProductNotFoundException exception) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+
+        return new ResponseEntity<>(productService.updateProduct(updatedProduct), HttpStatus.OK);
     }
 
     /*
@@ -77,12 +65,7 @@ public class ProductController {
 
     @PostMapping("/products")
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
-        try {
-            return new ResponseEntity<>(productService.addProduct(product), HttpStatus.CREATED);
-        } catch (ProductNotFoundException exception) {
-            return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
-        }
-
+        return new ResponseEntity<>(productService.addProduct(product), HttpStatus.CREATED);
     }
 
     /*
@@ -92,12 +75,7 @@ public class ProductController {
 
     @DeleteMapping("/products/{id}")
     public ResponseEntity<Product> deleteProduct(@PathVariable String id) {
-        try {
-            return new ResponseEntity<>(productService.deleteProduct(id), HttpStatus.OK);
-        } catch (ProductNotFoundException exception) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-
+        return new ResponseEntity<>(productService.deleteProduct(id), HttpStatus.OK);
     }
 
 }

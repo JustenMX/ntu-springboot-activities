@@ -9,6 +9,7 @@ import lombok.Setter;
 @Setter
 public class Product {
     private final String id;
+
     private String name;
     private double price;
     private String description;

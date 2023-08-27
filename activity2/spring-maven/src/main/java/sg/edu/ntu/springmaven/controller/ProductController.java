@@ -2,6 +2,8 @@ package sg.edu.ntu.springmaven.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,7 @@ import sg.edu.ntu.springmaven.service.ProductService;
 public class ProductController {
 
     private final ProductService productService;
+    private final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     @Autowired
     public ProductController(ProductService productService) {
@@ -33,6 +36,7 @@ public class ProductController {
 
     @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProducts() {
+        logger.info("🟩 Successful");
         return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
 
     }
@@ -44,6 +48,7 @@ public class ProductController {
 
     @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable String id) {
+        logger.info("🟩 Successful");
         return new ResponseEntity<>(productService.getProduct(id), HttpStatus.OK);
     }
 
@@ -54,7 +59,7 @@ public class ProductController {
 
     @PutMapping("/products/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable String id, @RequestBody Product updatedProduct) {
-
+        logger.info("🟩 Successful");
         return new ResponseEntity<>(productService.updateProduct(updatedProduct), HttpStatus.OK);
     }
 
@@ -65,6 +70,7 @@ public class ProductController {
 
     @PostMapping("/products")
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
+        logger.info("🟩 Successful");
         return new ResponseEntity<>(productService.addProduct(product), HttpStatus.CREATED);
     }
 
@@ -75,6 +81,7 @@ public class ProductController {
 
     @DeleteMapping("/products/{id}")
     public ResponseEntity<Product> deleteProduct(@PathVariable String id) {
+        logger.info("🟩 Successful");
         return new ResponseEntity<>(productService.deleteProduct(id), HttpStatus.OK);
     }
 

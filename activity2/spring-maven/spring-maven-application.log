@@ -1,0 +1,67 @@
+2023-08-28T01:06:28.620+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Starting SpringMavenApplication using Java 17.0.8 with PID 40241 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven)
+2023-08-28T01:06:28.621+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-08-28T01:06:28.675+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-08-28T01:06:28.676+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-28T01:06:28.676+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-28T01:06:28.679+08:00  INFO 40241 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-28T01:06:28.679+08:00  INFO 40241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 58 ms
+2023-08-28T01:06:28.703+08:00  INFO 40241 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-28T01:06:28.706+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-08-28T01:06:28.708+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Started SpringMavenApplication in 0.105 seconds (process running for 191.732)
+2023-08-28T01:06:28.709+08:00  INFO 40241 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-28T01:07:04.453+08:00  INFO 40241 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-28T01:07:04.468+08:00  INFO 40241 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-28T01:07:04.524+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Starting SpringMavenApplication using Java 17.0.8 with PID 40241 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven)
+2023-08-28T01:07:04.524+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-08-28T01:07:04.577+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-08-28T01:07:04.578+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-28T01:07:04.578+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-28T01:07:04.581+08:00  INFO 40241 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-28T01:07:04.581+08:00  INFO 40241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 56 ms
+2023-08-28T01:07:04.603+08:00  INFO 40241 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-28T01:07:04.606+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-08-28T01:07:04.607+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Started SpringMavenApplication in 0.094 seconds (process running for 227.631)
+2023-08-28T01:07:04.608+08:00  INFO 40241 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-28T01:07:06.631+08:00  INFO 40241 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-28T01:07:06.632+08:00  INFO 40241 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-28T01:07:06.632+08:00  INFO 40241 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-08-28T01:07:06.633+08:00  INFO 40241 --- [http-nio-8081-exec-2] s.e.n.s.controller.ProductController     : 🟩 Successful
+2023-08-28T01:08:05.636+08:00  INFO 40241 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-28T01:08:05.644+08:00  INFO 40241 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-28T01:08:05.644+08:00  INFO 40241 --- [Thread-15] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-28T01:08:05.691+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Starting SpringMavenApplication using Java 17.0.8 with PID 40241 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven)
+2023-08-28T01:08:05.691+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-08-28T01:08:05.742+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-08-28T01:08:05.742+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-28T01:08:05.742+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-28T01:08:05.745+08:00  INFO 40241 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-28T01:08:05.745+08:00  INFO 40241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 53 ms
+2023-08-28T01:08:05.768+08:00  INFO 40241 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-28T01:08:05.771+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-08-28T01:08:05.773+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Started SpringMavenApplication in 0.091 seconds (process running for 288.795)
+2023-08-28T01:08:05.773+08:00  INFO 40241 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-28T01:08:24.357+08:00  INFO 40241 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-28T01:08:24.360+08:00  INFO 40241 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-28T01:08:24.398+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Starting SpringMavenApplication using Java 17.0.8 with PID 40241 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven)
+2023-08-28T01:08:24.398+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-08-28T01:08:24.450+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-08-28T01:08:24.450+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-28T01:08:24.450+08:00  INFO 40241 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-28T01:08:24.453+08:00  INFO 40241 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-28T01:08:24.453+08:00  INFO 40241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 54 ms
+2023-08-28T01:08:24.475+08:00  INFO 40241 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-28T01:08:24.478+08:00  INFO 40241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-08-28T01:08:24.480+08:00  INFO 40241 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Started SpringMavenApplication in 0.091 seconds (process running for 307.502)
+2023-08-28T01:08:24.480+08:00  INFO 40241 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-28T01:08:37.928+08:00  INFO 40795 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Starting SpringMavenApplication using Java 17.0.8 with PID 40795 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/activity2/spring-maven)
+2023-08-28T01:08:37.929+08:00  INFO 40795 --- [restartedMain] s.e.n.s.SpringMavenApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-08-28T01:08:37.948+08:00  INFO 40795 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-28T01:08:37.948+08:00  INFO 40795 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-28T01:08:38.285+08:00  INFO 40795 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-08-28T01:08:38.289+08:00  INFO 40795 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-28T01:08:38.289+08:00  INFO 40795 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-28T01:08:38.312+08:00  INFO 40795 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-28T01:08:38.312+08:00  INFO 40795 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 363 ms
+2023-08-28T01:08:38.445+08:00  INFO 40795 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-28T01:08:38.456+08:00  INFO 40795 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-08-28T01:08:38.462+08:00  INFO 40795 --- [restartedMain] s.e.n.s.SpringMavenApplication           : Started SpringMavenApplication in 0.699 seconds (process running for 0.888)

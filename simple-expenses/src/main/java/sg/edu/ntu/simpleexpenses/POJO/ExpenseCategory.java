@@ -1,4 +1,4 @@
-package sg.edu.ntu.simpleexpenses.POJO;
+package sg.edu.ntu.simpleexpenses.pojo;
 
 public enum ExpenseCategory {
     FOOD,

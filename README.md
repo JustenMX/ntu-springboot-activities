@@ -61,7 +61,7 @@ Here is a list of activities included in this repository:
 
 In addition to the course exercises, I've also included some of the projects I've independently developed.
 
-1. [Project 1: Expenses RESTful API](/simple-expenses)
+1. [Project 1: Expenses RESTful](/simple-expenses)
 
 Please click on the links to navigate to each activity's folder and explore the related materials.
 

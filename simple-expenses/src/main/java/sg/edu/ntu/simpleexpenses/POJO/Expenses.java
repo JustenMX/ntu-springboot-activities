@@ -1,4 +1,4 @@
-package sg.edu.ntu.simpleexpenses.POJO;
+package sg.edu.ntu.simpleexpenses.pojo;
 
 import java.util.UUID;
 

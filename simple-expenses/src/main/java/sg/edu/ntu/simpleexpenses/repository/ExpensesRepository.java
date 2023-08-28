@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import sg.edu.ntu.simpleexpenses.POJO.ExpenseCategory;
-import sg.edu.ntu.simpleexpenses.POJO.Expenses;
+import sg.edu.ntu.simpleexpenses.pojo.ExpenseCategory;
+import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 
 @Repository
 public class ExpensesRepository {

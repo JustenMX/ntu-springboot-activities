@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
+import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.ExpenseCategory;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 
@@ -92,9 +94,24 @@ public class ExpensesRepository {
     /*
      * DELETE
      */
-    public List<Expenses> deleteExpense(String id) {
-        expenseList.removeIf(expense -> expense.getId().equals(id));
-        return expenseList;
+    public Expenses deleteExpense(String id) {
+        Expenses expenseToRemove = null;
+        for (Expenses expense : expenseList) {
+            if (expense.getId().equals(id)) {
+                expenseToRemove = expense;
+                break;
+            }
+        }
+
+        if (expenseToRemove == null) {
+            throw new ResourceNotFoundException("expense with ID " + id + " not found.");
+        }
+
+        if (!expenseList.remove(expenseToRemove)) {
+            throw new OperationFailedException("failed to delete expense with ID " + id);
+        }
+
+        return expenseToRemove;
     }
 
 }

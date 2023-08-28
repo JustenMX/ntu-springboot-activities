@@ -87,7 +87,7 @@ public class ExpensesController {
      * DELETE
      */
     @DeleteMapping("/{id}")
-    public ResponseEntity<List<Expenses>> deleteExpenses(@PathVariable String id) {
+    public ResponseEntity<Expenses> deleteExpenses(@PathVariable String id) {
         logger.info("success");
         return new ResponseEntity<>(expensesService.deleteExpense(id), HttpStatus.OK);
     }

@@ -1,0 +1,177 @@
+2023-08-29T20:53:05.279+08:00  INFO 6433 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6433 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T20:53:05.282+08:00  INFO 6433 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T20:53:05.310+08:00  INFO 6433 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-29T20:53:05.310+08:00  INFO 6433 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-29T20:53:05.670+08:00  INFO 6433 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T20:53:05.676+08:00  INFO 6433 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T20:53:05.676+08:00  INFO 6433 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T20:53:05.704+08:00  INFO 6433 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T20:53:05.704+08:00  INFO 6433 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 393 ms
+2023-08-29T20:53:05.731+08:00  WARN 6433 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'expensesController' defined in file [/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes/sg/edu/ntu/simpleexpenses/controller/ExpensesController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'sg.edu.ntu.simpleexpenses.service.ExpensesService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-29T20:53:05.732+08:00  INFO 6433 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T20:53:05.740+08:00  INFO 6433 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-29T20:53:05.751+08:00 ERROR 6433 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in sg.edu.ntu.simpleexpenses.controller.ExpensesController required a bean of type 'sg.edu.ntu.simpleexpenses.service.ExpensesService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'sg.edu.ntu.simpleexpenses.service.ExpensesService' in your configuration.
+
+2023-08-29T20:53:33.506+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T20:53:33.508+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T20:53:33.527+08:00  INFO 6486 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-29T20:53:33.528+08:00  INFO 6486 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-29T20:53:33.868+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T20:53:33.872+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T20:53:33.873+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T20:53:33.897+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T20:53:33.897+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 369 ms
+2023-08-29T20:53:34.073+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T20:53:34.085+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T20:53:34.091+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.738 seconds (process running for 0.91)
+2023-08-29T20:54:07.761+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-08-29T20:54:07.774+08:00  INFO 6486 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T20:54:07.808+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T20:54:07.808+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T20:54:07.879+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T20:54:07.879+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T20:54:07.880+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T20:54:07.883+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T20:54:07.883+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 72 ms
+2023-08-29T20:54:07.913+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T20:54:07.916+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T20:54:07.918+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.122 seconds (process running for 34.737)
+2023-08-29T20:54:07.919+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T20:54:15.392+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-29T20:54:15.395+08:00  INFO 6486 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T20:54:15.423+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T20:54:15.423+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T20:54:15.482+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T20:54:15.483+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T20:54:15.483+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T20:54:15.486+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T20:54:15.486+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 62 ms
+2023-08-29T20:54:15.513+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T20:54:15.515+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T20:54:15.517+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.102 seconds (process running for 42.337)
+2023-08-29T20:54:15.518+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T21:18:59.801+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-29T21:18:59.807+08:00  INFO 6486 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T21:18:59.848+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T21:18:59.848+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T21:18:59.912+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T21:18:59.912+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T21:18:59.912+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T21:18:59.915+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T21:18:59.915+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 66 ms
+2023-08-29T21:18:59.945+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T21:18:59.948+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T21:18:59.949+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.112 seconds (process running for 1526.749)
+2023-08-29T21:18:59.950+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T21:19:55.844+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-29T21:19:55.847+08:00  INFO 6486 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T21:19:55.877+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T21:19:55.877+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T21:19:55.927+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T21:19:55.927+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T21:19:55.928+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T21:19:55.930+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T21:19:55.930+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 53 ms
+2023-08-29T21:19:55.952+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T21:19:55.955+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T21:19:55.956+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.087 seconds (process running for 1582.755)
+2023-08-29T21:19:55.957+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T21:20:02.414+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-29T21:20:02.419+08:00  INFO 6486 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T21:20:02.460+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T21:20:02.460+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T21:20:02.510+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T21:20:02.511+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T21:20:02.511+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T21:20:02.513+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T21:20:02.513+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 52 ms
+2023-08-29T21:20:02.534+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T21:20:02.537+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T21:20:02.539+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.088 seconds (process running for 1589.337)
+2023-08-29T21:20:02.539+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T21:22:11.202+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-29T21:22:11.216+08:00  INFO 6486 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T21:22:11.267+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T21:22:11.267+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T21:22:11.319+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T21:22:11.319+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T21:22:11.320+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T21:22:11.322+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T21:22:11.322+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 54 ms
+2023-08-29T21:22:11.342+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T21:22:11.345+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T21:22:11.346+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.088 seconds (process running for 1718.145)
+2023-08-29T21:22:11.347+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T21:22:42.052+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-29T21:22:42.061+08:00  INFO 6486 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T21:22:42.110+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T21:22:42.110+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T21:22:42.163+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T21:22:42.163+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T21:22:42.163+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T21:22:42.166+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T21:22:42.166+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 55 ms
+2023-08-29T21:22:42.185+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T21:22:42.187+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T21:22:42.189+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.089 seconds (process running for 1748.987)
+2023-08-29T21:22:42.189+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T21:23:06.826+08:00  INFO 6486 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-29T21:23:06.837+08:00  INFO 6486 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-29T21:23:06.886+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 6486 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T21:23:06.886+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T21:23:06.938+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T21:23:06.939+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T21:23:06.939+08:00  INFO 6486 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T21:23:06.941+08:00  INFO 6486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T21:23:06.941+08:00  INFO 6486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 54 ms
+2023-08-29T21:23:06.961+08:00  INFO 6486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T21:23:06.963+08:00  INFO 6486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T21:23:06.964+08:00  INFO 6486 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.088 seconds (process running for 1773.762)
+2023-08-29T21:23:06.965+08:00  INFO 6486 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-29T21:29:27.380+08:00  INFO 8900 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 8900 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-29T21:29:27.382+08:00  INFO 8900 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-29T21:29:27.401+08:00  INFO 8900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-29T21:29:27.401+08:00  INFO 8900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-29T21:29:27.784+08:00  INFO 8900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-29T21:29:27.789+08:00  INFO 8900 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-29T21:29:27.789+08:00  INFO 8900 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-29T21:29:27.815+08:00  INFO 8900 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-29T21:29:27.815+08:00  INFO 8900 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 414 ms
+2023-08-29T21:29:27.954+08:00  INFO 8900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-29T21:29:27.966+08:00  INFO 8900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-29T21:29:27.971+08:00  INFO 8900 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.755 seconds (process running for 0.925)
+2023-08-29T21:29:37.046+08:00  INFO 8900 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-29T21:29:37.046+08:00  INFO 8900 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-29T21:29:37.047+08:00  INFO 8900 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-29T21:29:37.062+08:00  INFO 8900 --- [http-nio-9090-exec-1] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:29:48.993+08:00  INFO 8900 --- [http-nio-9090-exec-3] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:29:58.571+08:00  INFO 8900 --- [http-nio-9090-exec-4] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:29:58.572+08:00 ERROR 8900 --- [http-nio-9090-exec-4] s.e.n.s.e.GlobalExceptionHandler         : ResourceNotFoundException Occurred:
+2023-08-29T21:29:58.574+08:00  WARN 8900 --- [http-nio-9090-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException: expense with ID 2f46fa11-2f03-422b-a319-a4028b1e13b2 not found.]
+2023-08-29T21:30:28.691+08:00  INFO 8900 --- [http-nio-9090-exec-7] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:31:22.639+08:00  INFO 8900 --- [http-nio-9090-exec-10] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:31:22.639+08:00 ERROR 8900 --- [http-nio-9090-exec-10] s.e.n.s.e.GlobalExceptionHandler         : OperationFailedException Occurred:
+2023-08-29T21:31:22.639+08:00  WARN 8900 --- [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [sg.edu.ntu.simpleexpenses.exception.OperationFailedException: failed to update expense]
+2023-08-29T21:32:07.674+08:00  INFO 8900 --- [http-nio-9090-exec-9] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:32:07.674+08:00 ERROR 8900 --- [http-nio-9090-exec-9] s.e.n.s.e.GlobalExceptionHandler         : OperationFailedException Occurred:
+2023-08-29T21:32:07.675+08:00  WARN 8900 --- [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [sg.edu.ntu.simpleexpenses.exception.OperationFailedException: failed to update expense]
+2023-08-29T21:32:16.293+08:00  INFO 8900 --- [http-nio-9090-exec-1] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:32:37.141+08:00  INFO 8900 --- [http-nio-9090-exec-3] s.e.n.s.controller.ExpensesController    : success
+2023-08-29T21:32:37.141+08:00 ERROR 8900 --- [http-nio-9090-exec-3] s.e.n.s.e.GlobalExceptionHandler         : OperationFailedException Occurred:
+2023-08-29T21:32:37.142+08:00  WARN 8900 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [sg.edu.ntu.simpleexpenses.exception.OperationFailedException: failed to update expense]
+2023-08-29T21:33:00.838+08:00  INFO 8900 --- [http-nio-9090-exec-10] s.e.n.s.controller.ExpensesController    : success

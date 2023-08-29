@@ -2,83 +2,64 @@ package sg.edu.ntu.simpleexpenses.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
-import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.ExpenseCategory;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
-import sg.edu.ntu.simpleexpenses.repository.ExpensesRepository;
 
-@Service
-public class ExpensesService {
+public interface ExpensesService {
 
-    private final ExpensesRepository expensesRepository;
-
-    @Autowired
-    public ExpensesService(ExpensesRepository expensesRepository) {
-        this.expensesRepository = expensesRepository;
-    }
-
-    /*
-     * GET ALL
+    /**
+     * Retrieves all expenses
+     * 
+     * @return List of expenses.
      */
-    public List<Expenses> getAllExpenses() {
-        if (expensesRepository.getAllExpenses().isEmpty()) {
-            throw new ResourceNotFoundException("expenses not found");
-        }
-        return expensesRepository.getAllExpenses();
-    }
 
-    /*
-     * GET ONE
-     */
-    public Expenses getExpense(String id) {
-        if (expensesRepository.getExpense(id) == null) {
-            throw new ResourceNotFoundException("expense not found for ID: " + id);
-        }
-        return expensesRepository.getExpense(id);
-    }
+    public List<Expenses> getAllExpenses();
 
-    /*
-     * GET EXPENSES BY CATEGORY, MIN AMT, MAX AMT
+    /**
+     * Retrieves a single expense based on its ID
+     * 
+     * @param id id The ID of the expense to retrieve.
+     * @return The expense with the given ID.
      */
-    public List<Expenses> getExpensesByCategory(ExpenseCategory category, Double minAmount, Double maxAmount) {
-        if (expensesRepository.getExpensesByCategory(category, minAmount, maxAmount).isEmpty()) {
-            throw new ResourceNotFoundException("expense not found");
-        }
-        return expensesRepository.getExpensesByCategory(category, minAmount, maxAmount);
-    }
 
-    /*
-     * CREATE
-     */
-    public Expenses addExpense(Expenses newExpense) {
-        if (expensesRepository.addExpense(newExpense) == null) {
-            throw new OperationFailedException("failed to add expense");
-        }
-        return expensesRepository.addExpense(newExpense);
-    }
+    public Expenses getExpense(String id);
 
-    /*
-     * UPDATE
+    /**
+     * Retrieves expenses based on category and amount range.
+     *
+     * @param category  The expense category to filter by.
+     * @param minAmount The minimum expense amount (inclusive).
+     * @param maxAmount The maximum expense amount (inclusive).
+     * @return A list of expenses matching the criteria.
      */
-    public Expenses updateExpense(Expenses updateExpense) {
-        if (expensesRepository.updateExpense(updateExpense) == null) {
-            throw new OperationFailedException("failed to update expense");
-        }
-        return expensesRepository.updateExpense(updateExpense);
-    }
 
-    /*
-     * DELETE
+    public List<Expenses> getExpensesByCategory(ExpenseCategory category, Double minAmount, Double maxAmount);
+
+    /**
+     * Adds a new expense.
+     *
+     * @param newExpense The expense to add.
+     * @return The added expense.
      */
-    public Expenses deleteExpense(String id) {
-        if (expensesRepository.deleteExpense(id) == null) {
-            throw new ResourceNotFoundException("Expense with ID " + id + " not found.");
-        }
-        return expensesRepository.deleteExpense(id);
-    }
+
+    public Expenses addExpense(Expenses newExpense);
+
+    /**
+     * Updates an existing expense.
+     *
+     * @param updatedExpense The updated expense.
+     * @return The updated expense.
+     */
+
+    public Expenses updateExpense(Expenses updateExpense);
+
+    /**
+     * Deletes an expense by its ID.
+     *
+     * @param id The ID of the expense to delete.
+     * @return The deleted expense.
+     */
+
+    public Expenses deleteExpense(String id);
 
 }

@@ -13,7 +13,7 @@ public interface ExpensesService {
      * @return List of expenses.
      */
 
-    public List<Expenses> getAllExpenses();
+    List<Expenses> getAllExpenses();
 
     /**
      * Retrieves a single expense based on its ID
@@ -22,7 +22,7 @@ public interface ExpensesService {
      * @return The expense with the given ID.
      */
 
-    public Expenses getExpense(String id);
+    Expenses getExpense(String id);
 
     /**
      * Retrieves expenses based on category and amount range.
@@ -33,7 +33,7 @@ public interface ExpensesService {
      * @return A list of expenses matching the criteria.
      */
 
-    public List<Expenses> getExpensesByCategory(ExpenseCategory category, Double minAmount, Double maxAmount);
+    List<Expenses> getExpensesByCategory(ExpenseCategory category, Double minAmount, Double maxAmount);
 
     /**
      * Adds a new expense.
@@ -42,7 +42,7 @@ public interface ExpensesService {
      * @return The added expense.
      */
 
-    public Expenses addExpense(Expenses newExpense);
+    Expenses addExpense(Expenses newExpense);
 
     /**
      * Updates an existing expense.
@@ -51,7 +51,7 @@ public interface ExpensesService {
      * @return The updated expense.
      */
 
-    public Expenses updateExpense(Expenses updateExpense);
+    Expenses updateExpense(Expenses updateExpense);
 
     /**
      * Deletes an expense by its ID.
@@ -60,6 +60,6 @@ public interface ExpensesService {
      * @return The deleted expense.
      */
 
-    public Expenses deleteExpense(String id);
+    Expenses deleteExpense(String id);
 
 }

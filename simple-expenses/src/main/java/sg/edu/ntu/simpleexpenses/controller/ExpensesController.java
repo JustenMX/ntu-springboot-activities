@@ -17,12 +17,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
+import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.ExpenseCategory;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 import sg.edu.ntu.simpleexpenses.service.ExpensesService;
 
 @RestController
-@RequestMapping("/expenses")
+@Tag(name = "Expenses Controller", description = "Create, Update, Delete and Retrieve Expenses")
+@RequestMapping("/")
 public class ExpensesController {
 
     private final Logger logger = LoggerFactory.getLogger(ExpensesController.class);
@@ -36,7 +45,10 @@ public class ExpensesController {
     /*
      * GET ALL
      */
-    @GetMapping
+    @Operation(summary = "Get All Expenses", description = "to get all expenses")
+    @ApiResponse(responseCode = "200", description = "Successfully retrieved all expenses", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
+    @ApiResponse(responseCode = "404", description = "Expense does not exist", content = @Content(schema = @Schema(implementation = ResourceNotFoundException.class)))
+    @GetMapping("expenses")
     public ResponseEntity<List<Expenses>> getAllExpenses() {
         logger.info("success");
         return new ResponseEntity<>(expensesService.getAllExpenses(), HttpStatus.OK);
@@ -45,7 +57,10 @@ public class ExpensesController {
     /*
      * GET ONE
      */
-    @GetMapping("/{id}")
+    @Operation(summary = "Get Expense", description = "to get a single expense based on ID")
+    @ApiResponse(responseCode = "200", description = "Successfully retrieved expense", content = @Content(schema = @Schema(implementation = Expenses.class)))
+    @ApiResponse(responseCode = "404", description = "Expense does not exit", content = @Content(schema = @Schema(implementation = ResourceNotFoundException.class)))
+    @GetMapping("expenses/{id}")
     public ResponseEntity<Expenses> getExpense(@PathVariable String id) {
         logger.info("success");
         return new ResponseEntity<>(expensesService.getExpense(id), HttpStatus.OK);
@@ -54,7 +69,10 @@ public class ExpensesController {
     /*
      * GET EXPENSES BY CATEGORY
      */
-    @GetMapping("/category")
+    @Operation(summary = "Get Expenses filtered by category", description = "to get expenses based on category, minAmount, maxAmount defined")
+    @ApiResponse(responseCode = "200", description = "Successfully retrieved expenses based on categories", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
+    @ApiResponse(responseCode = "404", description = "Expense does not exist", content = @Content(array = @ArraySchema(schema = @Schema(implementation = ResourceNotFoundException.class))))
+    @GetMapping("expenses/category")
     public ResponseEntity<List<Expenses>> getExpensesByCategory(
             @RequestParam(required = false) ExpenseCategory category,
             @RequestParam(required = false) Double minAmount,
@@ -68,7 +86,10 @@ public class ExpensesController {
      * CREATE
      */
 
-    @PostMapping
+    @Operation(summary = "Create new Expense", description = "to create a new expense")
+    @ApiResponse(responseCode = "200", description = "Successfully created expense", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
+    @ApiResponse(responseCode = "400", description = "Expense not created", content = @Content(schema = @Schema(implementation = OperationFailedException.class)))
+    @PostMapping("expenses")
     public ResponseEntity<Expenses> addExpense(@RequestBody Expenses newExpense) {
         logger.info("success");
         return new ResponseEntity<>(expensesService.addExpense(newExpense), HttpStatus.OK);
@@ -77,7 +98,10 @@ public class ExpensesController {
     /*
      * UPDATE
      */
-    @PutMapping("/{id}")
+    @Operation(summary = "Update Expense", description = "to update a single expense based on the ID")
+    @ApiResponse(responseCode = "200", description = "Successfully updated expense", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
+    @ApiResponse(responseCode = "400", description = "Expense not updated", content = @Content(schema = @Schema(implementation = OperationFailedException.class)))
+    @PutMapping("expenses/{id}")
     public ResponseEntity<Expenses> updateExpense(@PathVariable String id, @RequestBody Expenses updatedExpense) {
         logger.info("success");
         return new ResponseEntity<>(expensesService.updateExpense(updatedExpense), HttpStatus.OK);
@@ -86,7 +110,10 @@ public class ExpensesController {
     /*
      * DELETE
      */
-    @DeleteMapping("/{id}")
+    @Operation(summary = "Delete Expense", description = "to delete an expense based on the ID")
+    @ApiResponse(responseCode = "200", description = "Successfully deleted expense", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
+    @ApiResponse(responseCode = "400", description = "Expense not deleted", content = @Content(array = @ArraySchema(schema = @Schema(implementation = OperationFailedException.class))))
+    @DeleteMapping("expenses/{id}")
     public ResponseEntity<Expenses> deleteExpenses(@PathVariable String id) {
         logger.info("success");
         return new ResponseEntity<>(expensesService.deleteExpense(id), HttpStatus.OK);

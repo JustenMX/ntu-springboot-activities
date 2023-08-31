@@ -13,12 +13,12 @@ import sg.edu.ntu.simpleexpenses.repository.ExpensesRepository;
 
 @Service
 @Primary
-public class ExpensesServiceImpl implements ExpensesService {
+public class ExpensesServiceImplementation implements ExpensesService {
 
     private final ExpensesRepository expensesRepository;
 
     @Autowired
-    public ExpensesServiceImpl(ExpensesRepository expensesRepository) {
+    public ExpensesServiceImplementation(ExpensesRepository expensesRepository) {
         this.expensesRepository = expensesRepository;
     }
 

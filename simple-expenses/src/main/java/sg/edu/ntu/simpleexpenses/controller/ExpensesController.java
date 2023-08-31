@@ -25,7 +25,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
 import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
-import sg.edu.ntu.simpleexpenses.service.ExpensesService;
+import sg.edu.ntu.simpleexpenses.service.ExpensesServiceImplementation;
 
 @RestController
 @Tag(name = "Expenses Controller", description = "Create, Update, Delete and Retrieve Expenses")
@@ -33,10 +33,10 @@ import sg.edu.ntu.simpleexpenses.service.ExpensesService;
 public class ExpensesController {
 
     private final Logger logger = LoggerFactory.getLogger(ExpensesController.class);
-    private final ExpensesService expensesService;
+    private final ExpensesServiceImplementation expensesService;
 
     @Autowired
-    public ExpensesController(ExpensesService expensesService) {
+    public ExpensesController(ExpensesServiceImplementation expensesService) {
         this.expensesService = expensesService;
     }
 

@@ -63,6 +63,63 @@ In addition to the course exercises, I've also included some of the projects I'v
 
 1. [Project 1: Expenses RESTful](/simple-expenses)
 
+#### Project 1 Timeline
+
+#### Phase 1: Initial API Setup
+
+#### Completed:
+
+- Developed a small-scale expenses API with various functions and endpoints within the controller layer.
+
+#### Phase 2: Code Refactoring and Architecture Enhancement
+
+#### Completed:
+
+- Refactored the codebase to adopt a structured architecture with data, service, and controller layers.
+- Leveraged new concepts and practices to improve the project's scalability and maintainability.
+
+##### Phase 3: Data Layer Implementation
+
+#### Completed:
+
+- Created the ExpensesRepository for data management, initially using an ArrayList.
+- Explored basic data handling techniques as the project took its initial shape.
+
+#### Phase 4: API Documentation with Swagger and OpenAPI
+
+#### Completed:
+
+- Set up comprehensive API documentation using Swagger and OpenAPI.
+- Improved project documentation practices and enhanced user experience.
+
+#### Phase 5: Code Refinement and Expansion
+
+#### Completed:
+
+- Continued code refactoring with a focus on improving the controller layer's readability.
+- Embraced newfound knowledge to expand the project's capabilities and structure.
+
+#### Phase 6: Integration with In-Memory H2 Database and JPA
+
+#### Completed:
+
+- Integrated the project with an in-memory H2 database using Java Persistence API (JPA).
+- Gained insights into database integration, further expanding the project's scope.
+
+#### Phase 7: Further Code Refactoring
+
+#### Completed:
+
+- Conducted additional code refactoring across various aspects of the project.
+- Add new Interface class and establish OneToMany relationship to current Expenses class.
+- Applied enhanced coding practices and patterns to accommodate new learnings.
+
+#### Phase 8: Future Steps
+
+#### Ongoing:
+
+- Planned future steps, including integrating the project with a PostgreSQL database for enhanced scalability and persistence.
+
 Please click on the links to navigate to each activity's folder and explore the related materials.
 
 ## Contributing

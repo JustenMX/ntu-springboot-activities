@@ -40,8 +40,10 @@ public class ExpensesController {
         this.expensesService = expensesService;
     }
 
-    /*
-     * GET ALL
+    /**
+     * GET ALL EXPENSES
+     * 
+     * @return
      */
     @Operation(summary = "Get All Expenses", description = "to get all expenses")
     @ApiResponse(responseCode = "200", description = "Successfully retrieved all expenses", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
@@ -53,8 +55,11 @@ public class ExpensesController {
         return new ResponseEntity<>(allExpenses, HttpStatus.OK);
     }
 
-    /*
-     * GET ONE
+    /**
+     * GET EXPENSE
+     * 
+     * @param id
+     * @return
      */
     @Operation(summary = "Get Expense", description = "to get a single expense based on ID")
     @ApiResponse(responseCode = "200", description = "Successfully retrieved expense", content = @Content(schema = @Schema(implementation = Expenses.class)))
@@ -66,8 +71,11 @@ public class ExpensesController {
         return new ResponseEntity<>(expense, HttpStatus.OK);
     }
 
-    /*
-     * GET EXPENSES BY CATEGORY
+    /**
+     * GET EXPENSE BY CATEGORY
+     * 
+     * @param expense
+     * @return
      */
     // @Operation(summary = "Get Expenses filtered by category", description = "to
     // get expenses based on category, minAmount, maxAmount defined")
@@ -88,12 +96,14 @@ public class ExpensesController {
     // return new ResponseEntity<>(filteredExpenses, HttpStatus.OK);
     // }
 
-    /*
-     * CREATE
+    /**
+     * ADD EXPENSE
+     * 
+     * @param expense
+     * @return
      */
-
     @Operation(summary = "Create new Expense", description = "to create a new expense")
-    @ApiResponse(responseCode = "200", description = "Successfully created expense", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
+    @ApiResponse(responseCode = "200", description = "Successfully created expense", content = @Content(schema = @Schema(implementation = Expenses.class)))
     @ApiResponse(responseCode = "400", description = "Expense not created", content = @Content(schema = @Schema(implementation = OperationFailedException.class)))
     @PostMapping("expenses")
     public ResponseEntity<Expenses> addExpense(@RequestBody Expenses expense) {
@@ -102,8 +112,12 @@ public class ExpensesController {
         return new ResponseEntity<>(newExpense, HttpStatus.OK);
     }
 
-    /*
-     * UPDATE
+    /**
+     * UPDATE EXPENSE
+     * 
+     * @param id
+     * @param expense
+     * @return
      */
     @Operation(summary = "Update Expense", description = "to update a single expense based on the ID")
     @ApiResponse(responseCode = "200", description = "Successfully updated expense", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))
@@ -115,8 +129,11 @@ public class ExpensesController {
         return new ResponseEntity<>(updateExpense, HttpStatus.OK);
     }
 
-    /*
-     * DELETE
+    /**
+     * DELETE EXPENSE
+     * 
+     * @param id
+     * @return
      */
     @Operation(summary = "Delete Expense", description = "to delete an expense based on the ID")
     @ApiResponse(responseCode = "200", description = "Successfully deleted expense", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Expenses.class))))

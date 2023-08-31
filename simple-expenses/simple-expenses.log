@@ -184,3 +184,993 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2023-08-31T14:58:22.162+08:00  WARN 43865 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
 2023-08-31T14:58:22.164+08:00  INFO 43865 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
 2023-08-31T14:58:22.288+08:00  INFO 43865 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-08-31T21:28:34.290+08:00  INFO 53753 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53753 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:28:34.292+08:00  INFO 53753 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:28:34.314+08:00  INFO 53753 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-31T21:28:34.314+08:00  INFO 53753 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-31T21:28:34.581+08:00  INFO 53753 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:28:34.604+08:00  INFO 53753 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:28:34.832+08:00  INFO 53753 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:28:34.836+08:00  INFO 53753 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:28:34.836+08:00  INFO 53753 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:28:34.863+08:00  INFO 53753 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:28:34.863+08:00  INFO 53753 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 549 ms
+2023-08-31T21:28:34.878+08:00  INFO 53753 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-31T21:28:34.953+08:00  INFO 53753 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:28:34.954+08:00  INFO 53753 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-31T21:28:34.959+08:00  INFO 53753 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:28:35.014+08:00  INFO 53753 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:28:35.033+08:00  INFO 53753 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-08-31T21:28:35.034+08:00  INFO 53753 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-31T21:28:35.085+08:00  INFO 53753 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:28:35.143+08:00  INFO 53753 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:28:35.235+08:00  INFO 53753 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:28:35.397+08:00  INFO 53753 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:28:35.470+08:00  INFO 53753 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:28:35.487+08:00  INFO 53753 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:28:35.721+08:00  WARN 53753 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:28:35.832+08:00  WARN 53753 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openAPIBuilder' defined in class path resource [org/springdoc/core/configuration/SpringDocConfiguration.class]: Unsatisfied dependency expressed through method 'openAPIBuilder' parameter 0: No qualifying bean of type 'io.swagger.v3.oas.models.OpenAPI' available: expected single matching bean but found 2: customerApi,expensesApi
+2023-08-31T21:28:35.833+08:00  INFO 53753 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:28:36.041+08:00  WARN 53753 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:28:36.042+08:00  INFO 53753 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-31T21:28:36.051+08:00  INFO 53753 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-31T21:28:36.053+08:00  INFO 53753 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:28:36.062+08:00  INFO 53753 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-31T21:28:36.073+08:00 ERROR 53753 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method openAPIBuilder in org.springdoc.core.configuration.SpringDocConfiguration required a single bean, but 2 were found:
+	- customerApi: defined by method 'customerApi' in class path resource [sg/edu/ntu/simpleexpenses/config/CustomerApiConfig.class]
+	- expensesApi: defined by method 'expensesApi' in class path resource [sg/edu/ntu/simpleexpenses/config/ExpensesApiConfig.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2023-08-31T21:30:30.939+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:30:30.940+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:30:30.959+08:00  INFO 53903 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-31T21:30:30.959+08:00  INFO 53903 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-31T21:30:31.225+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:30:31.248+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:30:31.483+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:30:31.487+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:30:31.487+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:30:31.515+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:30:31.515+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
+2023-08-31T21:30:31.529+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-31T21:30:31.619+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:30:31.620+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-31T21:30:31.625+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:30:31.683+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:30:31.707+08:00  INFO 53903 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-08-31T21:30:31.708+08:00  INFO 53903 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-31T21:30:31.768+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:30:31.821+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:30:31.914+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:30:32.080+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:30:32.162+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:30:32.180+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:30:32.423+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:30:32.588+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:30:32.601+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:30:32.607+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 1.829 seconds (process running for 2.021)
+2023-08-31T21:31:23.526+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-31T21:31:23.526+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-31T21:31:23.527+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-31T21:31:23.841+08:00  INFO 53903 --- [http-nio-9090-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 153 ms
+2023-08-31T21:32:33.312+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:32:33.320+08:00  INFO 53903 --- [Thread-6] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:32:33.321+08:00  INFO 53903 --- [Thread-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-31T21:32:33.324+08:00  INFO 53903 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:32:33.533+08:00  WARN 53903 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:32:33.534+08:00  INFO 53903 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-31T21:32:33.535+08:00  INFO 53903 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-31T21:32:33.575+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:32:33.576+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:32:33.643+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:32:33.647+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:32:33.689+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:32:33.689+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:32:33.689+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:32:33.694+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:32:33.694+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
+2023-08-31T21:32:33.700+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-08-31T21:32:33.702+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:32:33.702+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-08-31T21:32:33.702+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:32:33.714+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:32:33.716+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:32:33.716+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:32:33.721+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:32:33.728+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:32:33.734+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:32:33.736+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:32:33.781+08:00  WARN 53903 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerController' defined in file [/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes/sg/edu/ntu/simpleexpenses/controller/CustomerController.class]: Failed to instantiate [sg.edu.ntu.simpleexpenses.controller.CustomerController]: Constructor threw exception
+2023-08-31T21:32:33.782+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:32:33.988+08:00  WARN 53903 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:32:33.989+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-08-31T21:32:34.122+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-08-31T21:32:34.124+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:32:34.133+08:00  INFO 53903 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-31T21:32:34.150+08:00 ERROR 53903 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerController' defined in file [/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes/sg/edu/ntu/simpleexpenses/controller/CustomerController.class]: Failed to instantiate [sg.edu.ntu.simpleexpenses.controller.CustomerController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:314) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at sg.edu.ntu.simpleexpenses.SimpleExpensesApplication.main(SimpleExpensesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.3.jar:3.1.3]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [sg.edu.ntu.simpleexpenses.controller.CustomerController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:323) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The annotation @Tag must define the attribute name
+
+	at sg.edu.ntu.simpleexpenses.controller.CustomerController.<init>(CustomerController.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 26 common frames omitted
+
+2023-08-31T21:33:13.965+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:33:13.965+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:33:14.049+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:33:14.055+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:33:14.094+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:33:14.095+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:33:14.095+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:33:14.099+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:33:14.099+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 133 ms
+2023-08-31T21:33:14.106+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-08-31T21:33:14.107+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn11: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:33:14.107+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-08-31T21:33:14.107+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:33:14.118+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:33:14.120+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:33:14.120+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:33:14.124+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:33:14.130+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:33:14.135+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:33:14.137+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:33:14.190+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:33:14.243+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:33:14.247+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:33:14.250+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.301 seconds (process running for 163.66)
+2023-08-31T21:33:14.251+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:33:15.706+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-31T21:33:15.707+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-31T21:33:15.708+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-31T21:33:15.814+08:00  INFO 53903 --- [http-nio-9090-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 36 ms
+2023-08-31T21:34:45.510+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:34:45.516+08:00  INFO 53903 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:34:45.516+08:00  INFO 53903 --- [Thread-8] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-31T21:34:45.519+08:00  INFO 53903 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:34:45.726+08:00  WARN 53903 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:34:45.727+08:00  INFO 53903 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-08-31T21:34:45.728+08:00  INFO 53903 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-08-31T21:34:45.774+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:34:45.774+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:34:45.830+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:34:45.833+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:34:45.869+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:34:45.870+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:34:45.870+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:34:45.874+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:34:45.874+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 99 ms
+2023-08-31T21:34:45.880+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-08-31T21:34:45.881+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn21: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:34:45.881+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-08-31T21:34:45.881+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:34:45.892+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:34:45.893+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:34:45.893+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:34:45.899+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:34:45.904+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:34:45.910+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:34:45.911+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:34:45.963+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:34:46.012+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:34:46.016+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:34:46.019+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.252 seconds (process running for 255.428)
+2023-08-31T21:34:46.019+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:34:49.231+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-31T21:34:49.232+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-31T21:34:49.233+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-31T21:34:49.353+08:00  INFO 53903 --- [http-nio-9090-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 45 ms
+2023-08-31T21:36:07.205+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:36:07.210+08:00  INFO 53903 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:36:07.211+08:00  INFO 53903 --- [Thread-15] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-31T21:36:07.214+08:00  INFO 53903 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:36:07.420+08:00  WARN 53903 --- [Thread-15] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:36:07.420+08:00  INFO 53903 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-08-31T21:36:07.421+08:00  INFO 53903 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-08-31T21:36:07.459+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:36:07.459+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:36:07.514+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:36:07.518+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:36:07.553+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:36:07.553+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:36:07.553+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:36:07.557+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:36:07.557+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 98 ms
+2023-08-31T21:36:07.563+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-08-31T21:36:07.564+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn31: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:36:07.565+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-08-31T21:36:07.565+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:36:07.577+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:36:07.579+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:36:07.579+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:36:07.583+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:36:07.588+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:36:07.593+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:36:07.595+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:36:07.646+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:36:07.694+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:36:07.699+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:36:07.701+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.25 seconds (process running for 337.109)
+2023-08-31T21:36:07.702+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:36:42.417+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:36:42.420+08:00  INFO 53903 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:36:42.424+08:00  INFO 53903 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:36:42.630+08:00  WARN 53903 --- [Thread-19] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:36:42.631+08:00  INFO 53903 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-08-31T21:36:42.632+08:00  INFO 53903 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-08-31T21:36:42.676+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:36:42.676+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:36:42.730+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:36:42.733+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:36:42.770+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:36:42.770+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:36:42.770+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:36:42.774+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:36:42.774+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 97 ms
+2023-08-31T21:36:42.780+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-08-31T21:36:42.781+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn41: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:36:42.781+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-08-31T21:36:42.781+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:36:42.793+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:36:42.794+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:36:42.795+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:36:42.800+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:36:42.805+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:36:42.811+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:36:42.812+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:36:42.864+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:36:42.913+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:36:42.917+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:36:42.919+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.251 seconds (process running for 372.327)
+2023-08-31T21:36:42.920+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:38:00.010+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:38:00.013+08:00  INFO 53903 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:38:00.016+08:00  INFO 53903 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:38:00.222+08:00  WARN 53903 --- [Thread-23] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:38:00.223+08:00  INFO 53903 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-08-31T21:38:00.223+08:00  INFO 53903 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-08-31T21:38:00.259+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:38:00.259+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:38:00.319+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:38:00.322+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:38:00.364+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:38:00.364+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:38:00.364+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:38:00.371+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:38:00.371+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 111 ms
+2023-08-31T21:38:00.396+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-08-31T21:38:00.396+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn51: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:38:00.397+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-08-31T21:38:00.397+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:38:00.408+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:38:00.410+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:38:00.410+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:38:00.414+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:38:00.419+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:38:00.424+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:38:00.425+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:38:00.482+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:38:00.541+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:38:00.546+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:38:00.548+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.297 seconds (process running for 449.954)
+2023-08-31T21:38:00.549+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:38:43.339+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:38:43.341+08:00  INFO 53903 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:38:43.343+08:00  INFO 53903 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:38:43.549+08:00  WARN 53903 --- [Thread-27] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:38:43.550+08:00  INFO 53903 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-08-31T21:38:43.550+08:00  INFO 53903 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-08-31T21:38:43.592+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:38:43.593+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:38:43.647+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:38:43.650+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:38:43.687+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:38:43.687+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:38:43.687+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:38:43.691+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:38:43.691+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 98 ms
+2023-08-31T21:38:43.697+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-08-31T21:38:43.698+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn61: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:38:43.698+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-08-31T21:38:43.698+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:38:43.709+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:38:43.711+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:38:43.711+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:38:43.715+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:38:43.720+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:38:43.726+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:38:43.728+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:38:43.837+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:38:43.885+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:38:43.889+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:38:43.891+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.306 seconds (process running for 493.297)
+2023-08-31T21:38:43.892+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:39:13.567+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:39:13.569+08:00  INFO 53903 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:39:13.571+08:00  INFO 53903 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:39:13.777+08:00  WARN 53903 --- [Thread-31] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:39:13.777+08:00  INFO 53903 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-08-31T21:39:13.777+08:00  INFO 53903 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-08-31T21:39:13.816+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:39:13.816+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:39:13.870+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:39:13.872+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:39:13.908+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:39:13.908+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:39:13.908+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:39:13.912+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:39:13.912+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 95 ms
+2023-08-31T21:39:13.918+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-08-31T21:39:13.919+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn71: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:39:13.919+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-08-31T21:39:13.919+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:39:13.930+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:39:13.931+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:39:13.931+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:39:13.935+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:39:13.939+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:39:13.945+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:39:13.947+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:39:14.004+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:39:14.051+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:39:14.055+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:39:14.058+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.249 seconds (process running for 523.462)
+2023-08-31T21:39:14.058+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:39:29.606+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:39:29.608+08:00  INFO 53903 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:39:29.610+08:00  INFO 53903 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:39:29.817+08:00  WARN 53903 --- [Thread-35] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:39:29.818+08:00  INFO 53903 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-08-31T21:39:29.818+08:00  INFO 53903 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2023-08-31T21:39:29.886+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:39:29.886+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:39:29.942+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:39:29.946+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:39:29.982+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:39:29.983+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:39:29.983+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:39:29.987+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:39:29.987+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 100 ms
+2023-08-31T21:39:29.993+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-08-31T21:39:29.994+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection conn81: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:39:29.994+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-08-31T21:39:29.994+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:39:30.008+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:39:30.010+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:39:30.010+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:39:30.013+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:39:30.020+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:39:30.025+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:39:30.027+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:39:30.080+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:39:30.128+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:39:30.133+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:39:30.135+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.257 seconds (process running for 539.539)
+2023-08-31T21:39:30.136+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:39:49.723+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:39:49.726+08:00  INFO 53903 --- [Thread-39] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:39:49.730+08:00  INFO 53903 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:39:49.936+08:00  WARN 53903 --- [Thread-39] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:39:49.936+08:00  INFO 53903 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-08-31T21:39:49.936+08:00  INFO 53903 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2023-08-31T21:39:49.976+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:39:49.976+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:39:50.037+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:39:50.040+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:39:50.076+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:39:50.076+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:39:50.076+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:39:50.080+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:39:50.080+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 104 ms
+2023-08-31T21:39:50.087+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-08-31T21:39:50.087+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection conn91: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:39:50.087+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-08-31T21:39:50.087+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:39:50.100+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:39:50.102+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:39:50.102+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:39:50.105+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:39:50.109+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:39:50.113+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:39:50.114+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:39:50.165+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:39:50.212+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:39:50.217+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:39:50.219+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.251 seconds (process running for 559.623)
+2023-08-31T21:39:50.219+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:43:08.480+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:43:08.483+08:00  INFO 53903 --- [Thread-43] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:43:08.484+08:00  INFO 53903 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:43:08.689+08:00  WARN 53903 --- [Thread-43] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:43:08.690+08:00  INFO 53903 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-08-31T21:43:08.690+08:00  INFO 53903 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2023-08-31T21:43:08.731+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:43:08.731+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:43:08.787+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:43:08.790+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:43:08.825+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:43:08.825+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:43:08.825+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:43:08.829+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:43:08.829+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 98 ms
+2023-08-31T21:43:08.835+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2023-08-31T21:43:08.836+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection conn101: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:43:08.836+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2023-08-31T21:43:08.836+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:43:08.848+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:43:08.850+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:43:08.850+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:43:08.853+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:43:08.857+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:43:08.862+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:43:08.863+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:43:08.912+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:43:08.959+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:43:08.964+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:43:08.966+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.242 seconds (process running for 758.367)
+2023-08-31T21:43:08.967+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:43:23.479+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:43:23.483+08:00  INFO 53903 --- [Thread-47] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:43:23.488+08:00  INFO 53903 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:43:23.693+08:00  WARN 53903 --- [Thread-47] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:43:23.694+08:00  INFO 53903 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2023-08-31T21:43:23.695+08:00  INFO 53903 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2023-08-31T21:43:23.747+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:43:23.747+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:43:23.801+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:43:23.804+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:43:23.839+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:43:23.839+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:43:23.839+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:43:23.843+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:43:23.843+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 96 ms
+2023-08-31T21:43:23.849+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2023-08-31T21:43:23.850+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection conn111: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:43:23.850+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2023-08-31T21:43:23.850+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:43:23.862+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:43:23.864+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:43:23.864+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:43:23.867+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:43:23.872+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:43:23.876+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:43:23.877+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:43:23.928+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:43:23.973+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:43:23.978+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:43:23.980+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.24 seconds (process running for 773.38)
+2023-08-31T21:43:23.980+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:45:50.807+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:45:50.810+08:00  INFO 53903 --- [Thread-51] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:45:50.811+08:00  INFO 53903 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:45:51.015+08:00  WARN 53903 --- [Thread-51] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:45:51.016+08:00  INFO 53903 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2023-08-31T21:45:51.017+08:00  INFO 53903 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2023-08-31T21:45:51.068+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:45:51.068+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:45:51.122+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:45:51.124+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:45:51.160+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:45:51.160+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:45:51.160+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:45:51.164+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:45:51.164+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 95 ms
+2023-08-31T21:45:51.170+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2023-08-31T21:45:51.171+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection conn121: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:45:51.171+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2023-08-31T21:45:51.171+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:45:51.181+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:45:51.183+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:45:51.183+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:45:51.188+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:45:51.192+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:45:51.196+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:45:51.197+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:45:51.247+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:45:51.295+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:45:51.299+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:45:51.302+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.24 seconds (process running for 920.699)
+2023-08-31T21:45:51.302+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:53:47.092+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:53:47.098+08:00  INFO 53903 --- [Thread-55] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:53:47.102+08:00  INFO 53903 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:53:47.308+08:00  WARN 53903 --- [Thread-55] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:53:47.309+08:00  INFO 53903 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2023-08-31T21:53:47.310+08:00  INFO 53903 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2023-08-31T21:53:47.355+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:53:47.355+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:53:47.416+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:53:47.419+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:53:47.459+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:53:47.459+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:53:47.459+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:53:47.463+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:53:47.463+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 107 ms
+2023-08-31T21:53:47.472+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2023-08-31T21:53:47.472+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection conn131: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:53:47.472+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2023-08-31T21:53:47.472+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:53:47.484+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:53:47.486+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:53:47.486+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:53:47.489+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:53:47.493+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:53:47.497+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:53:47.498+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:53:47.554+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:53:47.611+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:53:47.616+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:53:47.618+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.272 seconds (process running for 1397.032)
+2023-08-31T21:53:47.619+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:54:04.160+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:54:04.164+08:00  INFO 53903 --- [Thread-59] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:54:04.169+08:00  INFO 53903 --- [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:54:04.375+08:00  WARN 53903 --- [Thread-59] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:54:04.376+08:00  INFO 53903 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2023-08-31T21:54:04.376+08:00  INFO 53903 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2023-08-31T21:54:04.420+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:54:04.421+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:54:04.477+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:54:04.479+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:54:04.515+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:54:04.515+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:54:04.516+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:54:04.520+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:54:04.520+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 99 ms
+2023-08-31T21:54:04.526+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2023-08-31T21:54:04.526+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection conn141: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:54:04.526+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2023-08-31T21:54:04.526+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:54:04.537+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:54:04.539+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:54:04.539+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:54:04.542+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:54:04.546+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:54:04.551+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:54:04.552+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:54:04.604+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:54:04.651+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:54:04.655+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:54:04.657+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.244 seconds (process running for 1414.071)
+2023-08-31T21:54:04.658+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:56:13.290+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:56:13.295+08:00  INFO 53903 --- [Thread-63] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:56:13.299+08:00  INFO 53903 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:13.506+08:00  WARN 53903 --- [Thread-63] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:56:13.506+08:00  INFO 53903 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2023-08-31T21:56:13.507+08:00  INFO 53903 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2023-08-31T21:56:13.559+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:56:13.559+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:56:13.616+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:56:13.619+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:56:13.652+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:56:13.652+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:56:13.652+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:56:13.656+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:56:13.656+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 96 ms
+2023-08-31T21:56:13.664+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2023-08-31T21:56:13.665+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection conn151: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:56:13.665+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2023-08-31T21:56:13.665+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:56:13.675+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:56:13.677+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:13.677+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:56:13.679+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:13.683+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:56:13.687+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:56:13.688+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:13.739+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:56:13.790+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:56:13.795+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:56:13.797+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.246 seconds (process running for 1543.209)
+2023-08-31T21:56:13.798+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:56:27.311+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:56:27.315+08:00  INFO 53903 --- [Thread-67] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:56:27.317+08:00  INFO 53903 --- [Thread-67] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:27.524+08:00  WARN 53903 --- [Thread-67] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:56:27.526+08:00  INFO 53903 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2023-08-31T21:56:27.527+08:00  INFO 53903 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2023-08-31T21:56:27.578+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:56:27.578+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:56:27.633+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:56:27.635+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:56:27.668+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:56:27.669+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:56:27.669+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:56:27.672+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:56:27.673+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 94 ms
+2023-08-31T21:56:27.678+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2023-08-31T21:56:27.679+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection conn161: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:56:27.679+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2023-08-31T21:56:27.679+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:56:27.690+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:56:27.691+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:27.691+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:56:27.694+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:27.698+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:56:27.704+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:56:27.705+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:27.755+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:56:27.801+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:56:27.806+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:56:27.808+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.237 seconds (process running for 1557.22)
+2023-08-31T21:56:27.808+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:56:42.336+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:56:42.338+08:00  INFO 53903 --- [Thread-71] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:56:42.340+08:00  INFO 53903 --- [Thread-71] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:42.546+08:00  WARN 53903 --- [Thread-71] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:56:42.547+08:00  INFO 53903 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2023-08-31T21:56:42.547+08:00  INFO 53903 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2023-08-31T21:56:42.590+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:56:42.590+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:56:42.649+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:56:42.652+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:56:42.686+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:56:42.686+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:56:42.686+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:56:42.690+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:56:42.690+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 100 ms
+2023-08-31T21:56:42.696+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2023-08-31T21:56:42.697+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection conn171: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:56:42.697+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2023-08-31T21:56:42.697+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:56:42.710+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:56:42.711+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:42.711+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:56:42.714+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:42.718+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:56:42.722+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:56:42.723+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:42.771+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:56:42.817+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:56:42.822+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:56:42.824+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.242 seconds (process running for 1572.236)
+2023-08-31T21:56:42.825+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:56:59.372+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:56:59.374+08:00  INFO 53903 --- [Thread-75] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:56:59.376+08:00  INFO 53903 --- [Thread-75] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:59.582+08:00  WARN 53903 --- [Thread-75] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:56:59.582+08:00  INFO 53903 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2023-08-31T21:56:59.583+08:00  INFO 53903 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2023-08-31T21:56:59.629+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:56:59.629+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:56:59.683+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:56:59.686+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:56:59.721+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:56:59.721+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:56:59.721+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:56:59.725+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:56:59.725+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 95 ms
+2023-08-31T21:56:59.731+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2023-08-31T21:56:59.732+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection conn181: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:56:59.732+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2023-08-31T21:56:59.732+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:56:59.742+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:56:59.744+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:59.744+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:56:59.748+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:56:59.753+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:56:59.757+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:56:59.758+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:56:59.811+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:56:59.858+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:56:59.862+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:56:59.864+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.244 seconds (process running for 1589.276)
+2023-08-31T21:56:59.865+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:57:11.907+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-31T21:57:11.908+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-31T21:57:11.911+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-08-31T21:57:12.050+08:00  INFO 53903 --- [http-nio-9090-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 61 ms
+2023-08-31T21:57:19.090+08:00 ERROR 53903 --- [http-nio-9090-exec-5] s.e.n.s.e.GlobalExceptionHandler         : ResourceNotFoundException Occurred:
+2023-08-31T21:57:19.096+08:00  WARN 53903 --- [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException: customers not found]
+2023-08-31T21:57:31.984+08:00  INFO 53903 --- [http-nio-9090-exec-6] s.e.n.s.controller.ExpensesController    : getAllExpenses() - success
+2023-08-31T21:58:53.356+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:58:53.359+08:00  INFO 53903 --- [Thread-79] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:58:53.359+08:00  INFO 53903 --- [Thread-79] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-31T21:58:53.361+08:00  INFO 53903 --- [Thread-79] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:58:53.565+08:00  WARN 53903 --- [Thread-79] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:58:53.565+08:00  INFO 53903 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2023-08-31T21:58:53.565+08:00  INFO 53903 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2023-08-31T21:58:53.605+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:58:53.605+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:58:53.660+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:58:53.663+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:58:53.697+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:58:53.697+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:58:53.698+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:58:53.702+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:58:53.702+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 96 ms
+2023-08-31T21:58:53.708+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2023-08-31T21:58:53.708+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection conn191: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:58:53.708+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2023-08-31T21:58:53.708+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:58:53.722+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:58:53.723+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:58:53.723+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:58:53.726+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:58:53.729+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:58:53.732+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:58:53.733+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:58:53.783+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:58:53.828+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:58:53.833+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:58:53.835+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.237 seconds (process running for 1703.246)
+2023-08-31T21:58:53.835+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:59:13.416+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:59:13.420+08:00  INFO 53903 --- [Thread-83] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:59:13.424+08:00  INFO 53903 --- [Thread-83] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:13.630+08:00  WARN 53903 --- [Thread-83] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:59:13.631+08:00  INFO 53903 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2023-08-31T21:59:13.633+08:00  INFO 53903 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2023-08-31T21:59:13.687+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:59:13.687+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:59:13.753+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:59:13.756+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:59:13.791+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:59:13.791+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:59:13.791+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:59:13.795+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:59:13.795+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 108 ms
+2023-08-31T21:59:13.801+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2023-08-31T21:59:13.801+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection conn201: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:59:13.802+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2023-08-31T21:59:13.802+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:59:13.812+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:59:13.813+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:13.813+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:59:13.816+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:13.820+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:59:13.826+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:59:13.827+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:13.878+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:59:13.925+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:59:13.929+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:59:13.932+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.254 seconds (process running for 1723.343)
+2023-08-31T21:59:13.933+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:59:21.387+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:59:21.389+08:00  INFO 53903 --- [Thread-87] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:59:21.392+08:00  INFO 53903 --- [Thread-87] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:21.598+08:00  WARN 53903 --- [Thread-87] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:59:21.598+08:00  INFO 53903 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2023-08-31T21:59:21.599+08:00  INFO 53903 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
+2023-08-31T21:59:21.645+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:59:21.645+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:59:21.698+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:59:21.701+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:59:21.735+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:59:21.735+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:59:21.735+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:59:21.739+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:59:21.740+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 94 ms
+2023-08-31T21:59:21.746+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2023-08-31T21:59:21.747+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection conn211: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:59:21.747+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2023-08-31T21:59:21.747+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:59:21.758+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:59:21.759+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:21.759+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:59:21.764+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:21.767+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:59:21.770+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:59:21.771+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:21.822+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:59:21.869+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:59:21.874+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:59:21.876+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.238 seconds (process running for 1731.287)
+2023-08-31T21:59:21.877+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:59:38.407+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:59:38.409+08:00  INFO 53903 --- [Thread-91] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:59:38.411+08:00  INFO 53903 --- [Thread-91] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:38.616+08:00  WARN 53903 --- [Thread-91] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:59:38.617+08:00  INFO 53903 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
+2023-08-31T21:59:38.617+08:00  INFO 53903 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+2023-08-31T21:59:38.660+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:59:38.660+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:59:38.716+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:59:38.719+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:59:38.755+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:59:38.755+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:59:38.755+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:59:38.760+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:59:38.760+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 99 ms
+2023-08-31T21:59:38.766+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2023-08-31T21:59:38.767+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-24 - Added connection conn221: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:59:38.767+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2023-08-31T21:59:38.767+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:59:38.781+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:59:38.782+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:38.782+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:59:38.785+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:38.789+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:59:38.793+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:59:38.794+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:38.844+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:59:38.889+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:59:38.896+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:59:38.898+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.246 seconds (process running for 1748.309)
+2023-08-31T21:59:38.899+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T21:59:53.409+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T21:59:53.413+08:00  INFO 53903 --- [Thread-95] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T21:59:53.417+08:00  INFO 53903 --- [Thread-95] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:53.622+08:00  WARN 53903 --- [Thread-95] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T21:59:53.623+08:00  INFO 53903 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2023-08-31T21:59:53.624+08:00  INFO 53903 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+2023-08-31T21:59:53.677+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T21:59:53.677+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T21:59:53.729+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T21:59:53.732+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T21:59:53.766+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T21:59:53.766+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T21:59:53.767+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T21:59:53.771+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T21:59:53.771+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 94 ms
+2023-08-31T21:59:53.777+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2023-08-31T21:59:53.778+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-25 - Added connection conn231: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T21:59:53.778+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2023-08-31T21:59:53.778+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T21:59:53.789+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T21:59:53.791+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:53.791+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T21:59:53.795+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T21:59:53.799+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T21:59:53.802+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T21:59:53.803+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T21:59:53.877+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T21:59:53.924+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T21:59:53.929+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T21:59:53.931+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.261 seconds (process running for 1763.342)
+2023-08-31T21:59:53.932+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T22:00:00.385+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T22:00:00.391+08:00  INFO 53903 --- [Thread-99] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T22:00:00.396+08:00  INFO 53903 --- [Thread-99] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T22:00:00.599+08:00  WARN 53903 --- [Thread-99] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T22:00:00.600+08:00  INFO 53903 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2023-08-31T22:00:00.600+08:00  INFO 53903 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
+2023-08-31T22:00:00.646+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T22:00:00.646+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T22:00:00.701+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T22:00:00.705+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2023-08-31T22:00:00.739+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T22:00:00.740+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T22:00:00.740+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T22:00:00.744+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T22:00:00.744+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 97 ms
+2023-08-31T22:00:00.750+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Starting...
+2023-08-31T22:00:00.751+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Added connection conn241: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T22:00:00.751+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Start completed.
+2023-08-31T22:00:00.751+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T22:00:00.762+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T22:00:00.763+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T22:00:00.763+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T22:00:00.768+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T22:00:00.772+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T22:00:00.777+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T22:00:00.777+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T22:00:00.828+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T22:00:00.876+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T22:00:00.881+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T22:00:00.883+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.243 seconds (process running for 1770.294)
+2023-08-31T22:00:00.884+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T22:00:46.740+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T22:00:46.745+08:00  INFO 53903 --- [Thread-103] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T22:00:46.749+08:00  INFO 53903 --- [Thread-103] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T22:00:46.956+08:00  WARN 53903 --- [Thread-103] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T22:00:46.956+08:00  INFO 53903 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown initiated...
+2023-08-31T22:00:46.957+08:00  INFO 53903 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown completed.
+2023-08-31T22:00:47.007+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T22:00:47.007+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T22:00:47.061+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T22:00:47.064+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T22:00:47.097+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T22:00:47.098+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T22:00:47.098+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T22:00:47.102+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T22:00:47.102+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 95 ms
+2023-08-31T22:00:47.108+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Starting...
+2023-08-31T22:00:47.110+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-27 - Added connection conn251: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T22:00:47.110+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Start completed.
+2023-08-31T22:00:47.110+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T22:00:47.120+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T22:00:47.121+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T22:00:47.121+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T22:00:47.124+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T22:00:47.128+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T22:00:47.131+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T22:00:47.132+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T22:00:47.180+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T22:00:47.229+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T22:00:47.233+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T22:00:47.236+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.235 seconds (process running for 1816.646)
+2023-08-31T22:00:47.236+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T22:01:02.761+08:00  INFO 53903 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-31T22:01:02.765+08:00  INFO 53903 --- [Thread-107] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-31T22:01:02.769+08:00  INFO 53903 --- [Thread-107] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T22:01:02.974+08:00  WARN 53903 --- [Thread-107] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T22:01:02.975+08:00  INFO 53903 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown initiated...
+2023-08-31T22:01:02.975+08:00  INFO 53903 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown completed.
+2023-08-31T22:01:03.015+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Starting SimpleExpensesApplication using Java 17.0.8 with PID 53903 (/Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses/target/classes started by justen in /Users/justen/Desktop/Dev_Projects/ntu-springboot-activities/simple-expenses)
+2023-08-31T22:01:03.015+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-08-31T22:01:03.065+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-31T22:01:03.067+08:00  INFO 53903 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2023-08-31T22:01:03.099+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-31T22:01:03.100+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-31T22:01:03.100+08:00  INFO 53903 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-08-31T22:01:03.104+08:00  INFO 53903 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-31T22:01:03.104+08:00  INFO 53903 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 89 ms
+2023-08-31T22:01:03.111+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Starting...
+2023-08-31T22:01:03.112+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-28 - Added connection conn261: url=jdbc:h2:mem:simple-expenses user=SA
+2023-08-31T22:01:03.112+08:00  INFO 53903 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Start completed.
+2023-08-31T22:01:03.112+08:00  INFO 53903 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:simple-expenses'
+2023-08-31T22:01:03.122+08:00  INFO 53903 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-31T22:01:03.124+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T22:01:03.124+08:00  INFO 53903 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-31T22:01:03.127+08:00  INFO 53903 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-31T22:01:03.130+08:00  INFO 53903 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: sg.edu.ntu.simpleexpenses.pojo.Customer (class must be instantiated by Interceptor)
+2023-08-31T22:01:03.134+08:00  INFO 53903 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-31T22:01:03.134+08:00  INFO 53903 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T22:01:03.183+08:00  WARN 53903 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31T22:01:03.227+08:00  INFO 53903 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-31T22:01:03.234+08:00  INFO 53903 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-31T22:01:03.236+08:00  INFO 53903 --- [restartedMain] s.e.n.s.SimpleExpensesApplication        : Started SimpleExpensesApplication in 0.226 seconds (process running for 1832.646)
+2023-08-31T22:01:03.236+08:00  INFO 53903 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-31T22:01:19.164+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-31T22:01:19.164+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-31T22:01:19.171+08:00  INFO 53903 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-08-31T22:01:19.285+08:00  INFO 53903 --- [http-nio-9090-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 45 ms
+2023-08-31T22:01:54.806+08:00  INFO 53903 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-31T22:01:55.209+08:00  WARN 53903 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-08-31T22:01:55.210+08:00  INFO 53903 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown initiated...
+2023-08-31T22:01:55.327+08:00  INFO 53903 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown completed.

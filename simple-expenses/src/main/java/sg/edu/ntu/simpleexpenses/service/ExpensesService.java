@@ -2,7 +2,6 @@ package sg.edu.ntu.simpleexpenses.service;
 
 import java.util.List;
 
-import sg.edu.ntu.simpleexpenses.pojo.ExpenseCategory;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 
 public interface ExpensesService {
@@ -22,7 +21,7 @@ public interface ExpensesService {
      * @return The expense with the given ID.
      */
 
-    Expenses getExpense(String id);
+    Expenses getExpense(Long id);
 
     /**
      * Retrieves expenses based on category and amount range.
@@ -33,25 +32,27 @@ public interface ExpensesService {
      * @return A list of expenses matching the criteria.
      */
 
-    List<Expenses> getExpensesByCategory(ExpenseCategory category, Double minAmount, Double maxAmount);
+    // List<Expenses> getExpensesByCategory(ExpenseCategory category, Double
+    // minAmount, Double maxAmount);
 
     /**
      * Adds a new expense.
      *
-     * @param newExpense The expense to add.
+     * @param expense The expense to add.
      * @return The added expense.
      */
 
-    Expenses addExpense(Expenses newExpense);
+    Expenses addExpense(Expenses expense);
 
     /**
      * Updates an existing expense.
      *
-     * @param updatedExpense The updated expense.
+     * @param id      The id of the expense to update
+     * @param expense The expense to update
      * @return The updated expense.
      */
 
-    Expenses updateExpense(Expenses updateExpense);
+    Expenses updateExpense(Long id, Expenses expense);
 
     /**
      * Deletes an expense by its ID.
@@ -60,6 +61,6 @@ public interface ExpensesService {
      * @return The deleted expense.
      */
 
-    Expenses deleteExpense(String id);
+    void deleteExpense(Long id);
 
 }

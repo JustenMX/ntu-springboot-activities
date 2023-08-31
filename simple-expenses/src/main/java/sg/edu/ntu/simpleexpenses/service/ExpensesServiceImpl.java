@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
 import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
-import sg.edu.ntu.simpleexpenses.pojo.ExpenseCategory;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 import sg.edu.ntu.simpleexpenses.repository.ExpensesRepository;
 
@@ -23,70 +22,75 @@ public class ExpensesServiceImpl implements ExpensesService {
         this.expensesRepository = expensesRepository;
     }
 
-    /*
-     * GET ALL
-     */
     @Override
     public List<Expenses> getAllExpenses() {
-        if (expensesRepository.getAllExpenses().isEmpty()) {
+        List<Expenses> allExpenses = expensesRepository.findAll();
+        if (allExpenses.isEmpty()) {
             throw new ResourceNotFoundException("expenses not found");
         }
-        return expensesRepository.getAllExpenses();
+        return allExpenses;
     }
 
     /*
      * GET ONE
      */
     @Override
-    public Expenses getExpense(String id) {
-        if (expensesRepository.getExpense(id) == null) {
+    public Expenses getExpense(Long id) {
+        Expenses foundExpenses = expensesRepository.findById(id).orElse(null);
+        if (foundExpenses == null) {
             throw new ResourceNotFoundException("expense not found for ID: " + id);
         }
-        return expensesRepository.getExpense(id);
+        return foundExpenses;
     }
 
     /*
      * GET EXPENSES BY CATEGORY, MIN AMT, MAX AMT
      */
-    @Override
-    public List<Expenses> getExpensesByCategory(ExpenseCategory category, Double minAmount, Double maxAmount) {
-        if (expensesRepository.getExpensesByCategory(category, minAmount, maxAmount).isEmpty()) {
-            throw new ResourceNotFoundException("expense not found");
-        }
-        return expensesRepository.getExpensesByCategory(category, minAmount, maxAmount);
-    }
+    // @Override
+    // public List<Expenses> getExpensesByCategory(ExpenseCategory category, Double
+    // minAmount, Double maxAmount) {
+    // List<Expenses> filteredExpenses =
+    // expensesRepository.getExpensesByCategory(category, minAmount, maxAmount);
+    // if (filteredExpenses.isEmpty()) {
+    // throw new ResourceNotFoundException("expense not found");
+    // }
+    // return filteredExpenses;
+    // }
 
     /*
      * CREATE
      */
     @Override
-    public Expenses addExpense(Expenses newExpense) {
-        if (expensesRepository.addExpense(newExpense) == null) {
-            throw new OperationFailedException("failed to add expense");
-        }
-        return expensesRepository.addExpense(newExpense);
+    public Expenses addExpense(Expenses expense) {
+        Expenses newExpense = expensesRepository.save(expense);
+        return newExpense;
     }
 
     /*
      * UPDATE
      */
     @Override
-    public Expenses updateExpense(Expenses updateExpense) {
-        if (expensesRepository.updateExpense(updateExpense) == null) {
+    public Expenses updateExpense(Long id, Expenses expense) {
+        Expenses updatedExpense = expensesRepository.findById(id).orElse(null);
+        if (updatedExpense == null) {
             throw new OperationFailedException("failed to update expense");
         }
-        return expensesRepository.updateExpense(updateExpense);
+        updatedExpense.setDescription(expense.getDescription());
+        updatedExpense.setAmount(expense.getAmount());
+        updatedExpense.setCategory(expense.getCategory());
+        return updatedExpense;
     }
 
     /*
      * DELETE
      */
     @Override
-    public Expenses deleteExpense(String id) {
-        if (expensesRepository.deleteExpense(id) == null) {
+    public void deleteExpense(Long id) {
+        Expenses deleteExpense = expensesRepository.findById(id).orElse(null);
+        if (deleteExpense == null) {
             throw new ResourceNotFoundException("Expense with ID " + id + " not found.");
         }
-        return expensesRepository.deleteExpense(id);
+        expensesRepository.deleteById(id);
     }
 
 }

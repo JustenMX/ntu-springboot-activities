@@ -59,66 +59,68 @@ Here is a list of activities included in this repository:
 4. [Activity 5: Java Persistent API](/activity5)
 5. [Activity 6: Test-Driven Development](/activity6) -->
 
+---
+
 In addition to the course exercises, I've also included some of the projects I've independently developed.
 
-1. [Project 1: Expenses RESTful](/simple-expenses)
+## Project 1: Expenses RESTful API
 
-#### Project 1 Timeline
+**Repository Link:** [Project 1: Expenses RESTful](/simple-expenses)
 
-#### Phase 1: Initial API Setup
+### Project Timeline
 
-#### Completed:
+### Phase 1: Initial API Setup
 
-- Developed a small-scale expenses API with various functions and endpoints within the controller layer.
+- **Status:** Completed
 
-#### Phase 2: Code Refactoring and Architecture Enhancement
+Developed a small-scale expenses API with various functions and endpoints within the controller layer.
 
-#### Completed:
+### Phase 2: Code Refactoring and Architecture Enhancement
 
-- Refactored the codebase to adopt a structured architecture with data, service, and controller layers.
-- Leveraged new concepts and practices to improve the project's scalability and maintainability.
+- **Status:** Completed
 
-##### Phase 3: Data Layer Implementation
+Refactored the codebase to adopt a structured architecture with data, service, and controller layers. Leveraged new concepts and practices to improve the project's scalability and maintainability.
 
-#### Completed:
+### Phase 3: Data Layer Implementation
 
-- Created the ExpensesRepository for data management, initially using an ArrayList.
-- Explored basic data handling techniques as the project took its initial shape.
+- **Status:** Completed
 
-#### Phase 4: API Documentation with Swagger and OpenAPI
+Created the ExpensesRepository for data management, initially using an ArrayList. Explored basic data handling techniques as the project took its initial shape.
 
-#### Completed:
+### Phase 4: API Documentation with Swagger and OpenAPI
 
-- Set up comprehensive API documentation using Swagger and OpenAPI.
-- Improved project documentation practices and enhanced user experience.
+- **Status:** Completed
 
-#### Phase 5: Code Refinement and Expansion
+Set up comprehensive API documentation using Swagger and OpenAPI. Improved project documentation practices and enhanced user experience.
 
-#### Completed:
+![Swagger](assets/scr1.png)
 
-- Continued code refactoring with a focus on improving the controller layer's readability.
-- Embraced newfound knowledge to expand the project's capabilities and structure.
+### Phase 5: Code Refinement and Expansion
 
-#### Phase 6: Integration with In-Memory H2 Database and JPA
+- **Status:** Completed
 
-#### Completed:
+Continued code refactoring with a focus on improving the controller layer's readability. Embraced newfound knowledge to expand the project's capabilities and structure.
 
-- Integrated the project with an in-memory H2 database using Java Persistence API (JPA).
-- Gained insights into database integration, further expanding the project's scope.
+### Phase 6: Integration with In-Memory H2 Database and JPA
 
-#### Phase 7: Further Code Refactoring
+- **Status:** Completed
 
-#### Completed:
+Integrated the project with an in-memory H2 database using Java Persistence API (JPA). Gained insights into database integration, further expanding the project's scope.
 
-- Conducted additional code refactoring across various aspects of the project.
-- Add new Interface class and establish OneToMany relationship to current Expenses class.
-- Applied enhanced coding practices and patterns to accommodate new learnings.
+### Phase 7: Further Code Refactoring
 
-#### Phase 8: Future Steps
+- **Status:** Completed
 
-#### Ongoing:
+Conducted additional code refactoring across various aspects of the project. Added a new Interface class and established OneToMany and ManyToOne relationships to current Expenses and Customer classes. Added nested routes to add Expenses to Customer classes. Applied enhanced coding practices and patterns to accommodate new learnings.
 
-- Planned future steps, including integrating the project with a PostgreSQL database for enhanced scalability and persistence.
+![Customer](assets/scr2.png)
+![Swagger](assets/scr3.png)
+
+### Phase 8: Future Steps
+
+- **Status:** Ongoing
+
+Planned future steps, including integrating the project with a PostgreSQL database for enhanced scalability and persistence.
 
 Please click on the links to navigate to each activity's folder and explore the related materials.
 

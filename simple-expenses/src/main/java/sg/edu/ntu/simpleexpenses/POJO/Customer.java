@@ -1,10 +1,14 @@
 package sg.edu.ntu.simpleexpenses.pojo;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,5 +44,12 @@ public class Customer {
         this.jobTitle = jobTitle;
         this.yearOfBirth = yearOfBirth;
     }
+
+    /**
+     * ONE-TO-MANY BIDIRECTIONAL
+     * Parent Entity
+     */
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Expenses> expenses;
 
 }

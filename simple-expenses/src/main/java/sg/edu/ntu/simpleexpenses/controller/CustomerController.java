@@ -25,6 +25,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
 import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.Customer;
+import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 import sg.edu.ntu.simpleexpenses.service.CustomerServiceImplementation;
 
 @Controller
@@ -54,6 +55,22 @@ public class CustomerController {
         Customer newCustomer = customerService.addCustomer(customer);
         logger.info("addCustomer() - success");
         return new ResponseEntity<>(newCustomer, HttpStatus.OK);
+    }
+
+    /**
+     * ADD EXPENSES TO CUSTOMER
+     * 
+     * @param id
+     * @param expenses
+     * @return
+     */
+    @Operation(summary = "Add Expenses to Customer", description = "to add expenses to customer")
+    @ApiResponse(responseCode = "200", description = "Successfully added expenses to customer", content = @Content(schema = @Schema(implementation = Expenses.class)))
+    @ApiResponse(responseCode = "400", description = "Expenses not created to customer", content = @Content(schema = @Schema(implementation = OperationFailedException.class)))
+    @PostMapping("{id}/expenses")
+    public ResponseEntity<Expenses> addExpensesToCustomer(@PathVariable Long id, @RequestBody Expenses expenses) {
+        Expenses newExpense = customerService.addExpensesToCustomer(id, expenses);
+        return new ResponseEntity<>(newExpense, HttpStatus.OK);
     }
 
     /**

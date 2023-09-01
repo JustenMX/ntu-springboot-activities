@@ -3,6 +3,7 @@ package sg.edu.ntu.simpleexpenses.service;
 import java.util.List;
 
 import sg.edu.ntu.simpleexpenses.pojo.Customer;
+import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 
 public interface CustomerService {
 
@@ -14,6 +15,16 @@ public interface CustomerService {
      * @return new customer
      */
     Customer addCustomer(Customer customer);
+
+    /**
+     * CREATE
+     * ADD EXPENSE TO CUSTOMER
+     * 
+     * @param id
+     * @param expense
+     * @return
+     */
+    Expenses addExpensesToCustomer(Long id, Expenses expenses);
 
     /**
      * READ

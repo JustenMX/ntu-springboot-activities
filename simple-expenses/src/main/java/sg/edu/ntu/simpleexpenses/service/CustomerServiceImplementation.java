@@ -9,23 +9,37 @@ import org.springframework.stereotype.Service;
 import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
 import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.Customer;
+import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 import sg.edu.ntu.simpleexpenses.repository.CustomerRepository;
+import sg.edu.ntu.simpleexpenses.repository.ExpensesRepository;
 
 @Primary
 @Service
 public class CustomerServiceImplementation implements CustomerService {
 
     private final CustomerRepository customerRepository;
+    private final ExpensesRepository expensesRepository;
 
     @Autowired
-    public CustomerServiceImplementation(CustomerRepository customerRepository) {
+    public CustomerServiceImplementation(CustomerRepository customerRepository, ExpensesRepository expensesRepository) {
         this.customerRepository = customerRepository;
+        this.expensesRepository = expensesRepository;
     }
 
     @Override
     public Customer addCustomer(Customer customer) {
         Customer newCustomer = customerRepository.save(customer);
         return newCustomer;
+    }
+
+    @Override
+    public Expenses addExpensesToCustomer(Long id, Expenses expenses) {
+        Customer selectedCustomer = customerRepository.findById(id).orElse(null);
+        if (selectedCustomer == null) {
+            throw new ResourceNotFoundException("Customer not found");
+        }
+        expenses.setCustomer(selectedCustomer);
+        return expensesRepository.save(expenses);
     }
 
     @Override

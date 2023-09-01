@@ -14,10 +14,13 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "expenses")
+@RequiredArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -26,19 +29,19 @@ public class Expenses {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "description")
-    private String description;
-    @Column(name = "amount")
-    private Double amount;
-    @Enumerated(EnumType.STRING)
-    @Column(name = "category")
-    private ExpenseCategory category;
 
-    public Expenses(String description, Double amount, ExpenseCategory category) {
-        this.description = description;
-        this.amount = amount;
-        this.category = category;
-    }
+    @NonNull
+    @Column(name = "description", nullable = false)
+    private String description;
+
+    @NonNull
+    @Column(name = "amount", nullable = false)
+    private Double amount;
+
+    @NonNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = "category", nullable = false)
+    private ExpenseCategory category;
 
     /**
      * MANY-TO-ONE UNIDIRECTIONAL

@@ -11,10 +11,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "customer")
+@RequiredArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class Customer {
@@ -22,33 +27,36 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
-    @Column(name = "email")
-    private String email;
-    @Column(name = "contact_no")
-    private String contactNo;
-    @Column(name = "job_title")
-    private String jobTitle;
-    @Column(name = "year_of_birth")
-    private int yearOfBirth;
 
-    public Customer(String firstName, String lastName, String email, String contactNo, String jobTitle,
-            int yearOfBirth) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.contactNo = contactNo;
-        this.jobTitle = jobTitle;
-        this.yearOfBirth = yearOfBirth;
-    }
+    @NonNull
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
+    @NonNull
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
+
+    @NonNull
+    @Column(name = "email", nullable = false)
+    private String email;
+
+    @NonNull
+    @Column(name = "contact_no", nullable = false)
+    private String contactNo;
+
+    @NonNull
+    @Column(name = "job_title", nullable = false)
+    private String jobTitle;
+
+    @NonNull
+    @Column(name = "year_of_birth", nullable = false)
+    private Integer yearOfBirth;
 
     /**
      * ONE-TO-MANY BIDIRECTIONAL
      * Parent Entity
      */
+
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Expenses> expenses;
 

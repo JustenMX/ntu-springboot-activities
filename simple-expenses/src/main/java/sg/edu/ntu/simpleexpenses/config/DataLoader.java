@@ -26,10 +26,12 @@ public class DataLoader {
 
         private void generateMockData() {
                 // Create and save customers
-                Customer customer1 = new Customer("John", "Doe", "john@example.com", "123456789", "Manager", 1980);
+                Customer customer1 = new Customer("johndoe", "John", "Doe", "john@example.com", "123456789", "Manager",
+                                1980);
                 customerRepository.save(customer1);
 
-                Customer customer2 = new Customer("Jane", "Smith", "jane@example.com", "987654321", "Engineer", 1990);
+                Customer customer2 = new Customer("janesmith", "Jane", "Smith", "jane@example.com", "987654321",
+                                "Engineer", 1990);
                 customerRepository.save(customer2);
 
                 // Create and save expenses associated with customer1

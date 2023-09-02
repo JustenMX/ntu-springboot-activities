@@ -29,6 +29,10 @@ public class Customer {
     private Long id;
 
     @NonNull
+    @Column(name = "user_name", nullable = false, unique = true)
+    private String userName;
+
+    @NonNull
     @Column(name = "first_name", nullable = false)
     private String firstName;
 

@@ -19,7 +19,7 @@ This repository serves as a showcase of my journey through the Spring Boot exerc
 If you're a fellow student or developer interested in Spring Boot, feel free to explore the exercises and projects in this repository. You can clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/JustenMX/nut-springboot-activities
+git clone https://github.com/JustenMX/ntu-springboot-activities
 ```
 
 Each activity is stored in its respective folder, and you can navigate to each activity to find the Spring Boot files and BRIEF.md with specific instructions.
@@ -53,19 +53,17 @@ springboot-workshop/
 Here is a list of activities included in this repository:
 
 1. [Activity 1: Introduction to Spring Boot](/activity1)
-2. [Activity 2: Maven](/activity2)
-<!-- 3. [Activity 3: Components and Annotations](/activity3)
-3. [Activity 4: REST Controller](/activity4)
-4. [Activity 5: Java Persistent API](/activity5)
-5. [Activity 6: Test-Driven Development](/activity6) -->
+2. [Activity 2: Maven, Components and Annotations, Rest Controller](/activity2)
+<!-- 3. [Activity 5: Java Persistent API](/activity5)
+3. [Activity 6: Test-Driven Development](/activity6) -->
 
 ---
 
 In addition to the course exercises, I've also included some of the projects I've independently developed.
 
-## Project 1: Expenses RESTful API
+## Project 1: Springboot Expenses Tracker
 
-**Repository Link:** [Project 1: Expenses RESTful](/simple-expenses)
+**Repository Link:** [Project 1: Springboot Expenses Tracker](/simple-expenses)
 
 ### Project Timeline
 

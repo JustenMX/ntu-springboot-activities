@@ -12,16 +12,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Size;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+// import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+// import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "expenses")
-@RequiredArgsConstructor
-@NoArgsConstructor
+// @RequiredArgsConstructor
+// @NoArgsConstructor
 @Getter
 @Setter
 public class Expenses {
@@ -30,10 +34,13 @@ public class Expenses {
     @Column(name = "id")
     private Long id;
 
+    @Size(min = 2, max = 50, message = "Description must be between 2 and 50 characters")
     @NonNull
     @Column(name = "description", nullable = false)
     private String description;
 
+    @DecimalMin(value = "0.00", inclusive = false, message = "Amount must be greater than 0.00")
+    @DecimalMax(value = "9999.99", inclusive = true, message = "Amount must be less than or equal to 9999.99")
     @NonNull
     @Column(name = "amount", nullable = false)
     private Double amount;
@@ -52,4 +59,14 @@ public class Expenses {
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
+    /*
+     * Lombok Builder
+     */
+    @Builder
+    public Expenses(String description, Double amount, ExpenseCategory category, Customer customer) {
+        this.description = description;
+        this.amount = amount;
+        this.category = category;
+        this.customer = customer;
+    }
 }

@@ -26,34 +26,52 @@ public class DataLoader {
 
         private void generateMockData() {
                 // Create and save customers
-                Customer customer1 = new Customer("johndoe", "John", "Doe", "john@example.com", "123456789", "Manager",
-                                1980);
-                customerRepository.save(customer1);
+                Customer john = Customer.builder().userName("johndoe").firstName("John").lastName("Doe")
+                                .email("john@example.com").contactNo("12345678").jobTitle("Manager").yearOfBirth(1980)
+                                .build();
+                customerRepository.save(john);
 
-                Customer customer2 = new Customer("janesmith", "Jane", "Smith", "jane@example.com", "987654321",
-                                "Engineer", 1990);
-                customerRepository.save(customer2);
+                Customer jane = Customer.builder().userName("janesmith").firstName("Jane").lastName("Smith")
+                                .email("jane@example.com").contactNo("98745632").jobTitle("Engineer").yearOfBirth(1990)
+                                .build();
+                customerRepository.save(jane);
 
-                // Create and save expenses associated with customer1
-                Expenses expense1 = new Expenses("Drinks out with friends", 25.00, ExpenseCategory.FOOD);
-                expense1.setCustomer(customer1);
-                expensesRepository.save(expense1);
+                // Create and save expenses associated with john
+                Expenses expenses1 = Expenses.builder().description("Drinks out with friends").amount(25.00)
+                                .category(ExpenseCategory.FOOD).customer(john).build();
+                expensesRepository.save(expenses1);
 
-                Expenses expense2 = new Expenses("Lunch with colleagues", 15.00, ExpenseCategory.FOOD);
-                expense2.setCustomer(customer1);
-                expensesRepository.save(expense2);
+                Expenses expenses2 = Expenses.builder()
+                                .description("Lunch with colleagues")
+                                .amount(15.00)
+                                .category(ExpenseCategory.FOOD)
+                                .customer(john)
+                                .build();
+                expensesRepository.save(expenses2);
 
-                Expenses expense3 = new Expenses("Gym membership", 30.00, ExpenseCategory.FITNESS);
-                expense3.setCustomer(customer1);
-                expensesRepository.save(expense3);
+                Expenses expenses3 = Expenses.builder()
+                                .description("Gym membership")
+                                .amount(30.00)
+                                .category(ExpenseCategory.FITNESS)
+                                .customer(john)
+                                .build();
+                expensesRepository.save(expenses3);
 
-                // Create and save expenses associated with customer2
-                Expenses expense4 = new Expenses("Movie night", 12.50, ExpenseCategory.ENTERTAINMENT);
-                expense4.setCustomer(customer2);
-                expensesRepository.save(expense4);
+                // Create and save expenses associated with jane
+                Expenses expenses4 = Expenses.builder()
+                                .description("Movie night")
+                                .amount(12.50)
+                                .category(ExpenseCategory.ENTERTAINMENT)
+                                .customer(jane)
+                                .build();
+                expensesRepository.save(expenses4);
 
-                Expenses expense5 = new Expenses("Groceries", 50.00, ExpenseCategory.GROCERY);
-                expense5.setCustomer(customer2);
-                expensesRepository.save(expense5);
+                Expenses expenses5 = Expenses.builder()
+                                .description("Groceries")
+                                .amount(50.00)
+                                .category(ExpenseCategory.GROCERY)
+                                .customer(jane)
+                                .build();
+                expensesRepository.save(expenses5);
         }
 }

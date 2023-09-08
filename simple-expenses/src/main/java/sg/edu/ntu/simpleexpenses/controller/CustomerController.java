@@ -130,8 +130,8 @@ public class CustomerController {
     @PutMapping("{id}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
         Customer updateCustomer = customerService.updateCustomer(id, customer);
-        logger.info("Updated customer [ID: {}, Name: {} {}]", customer.getId(), customer.getFirstName(),
-                customer.getLastName());
+        logger.info("Updated customer [ID: {}, Name: {} {}]", updateCustomer.getId(), updateCustomer.getFirstName(),
+                updateCustomer.getLastName());
         return new ResponseEntity<>(updateCustomer, HttpStatus.OK);
     }
 

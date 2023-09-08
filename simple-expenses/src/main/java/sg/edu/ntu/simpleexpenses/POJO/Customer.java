@@ -10,8 +10,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
@@ -67,7 +68,8 @@ public class Customer {
     @Column(name = "job_title", nullable = false)
     private String jobTitle;
 
-    @Digits(integer = 4, fraction = 0, message = "Invalid year format")
+    @Max(value = 2005, message = "Year of birth should not be later than 2005")
+    @Min(value = 1940, message = "Year of birth should not be earlier than 1940")
     @NonNull
     @Column(name = "year_of_birth", nullable = false)
     private Integer yearOfBirth;
@@ -75,6 +77,7 @@ public class Customer {
     /**
      * ONE-TO-MANY BIDIRECTIONAL
      * Parent Entity
+     * One Customer (Parent Entity) can have multiple expenses
      */
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
@@ -85,7 +88,7 @@ public class Customer {
      */
     @Builder
     public Customer(String userName, String firstName, String lastName, String email, String contactNo, String jobTitle,
-            Integer yearOfBirth, List<Expenses> expenses) {
+            int yearOfBirth, List<Expenses> expenses) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;

@@ -1,5 +1,7 @@
 package sg.edu.ntu.simpleexpenses.pojo;
 
+import java.time.LocalDate;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
@@ -14,6 +16,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
 import lombok.Getter;
@@ -50,6 +53,11 @@ public class Expenses {
     @Column(name = "category", nullable = false)
     private ExpenseCategory category;
 
+    @PastOrPresent(message = "Expense date should not be in the future")
+    @NonNull
+    @Column(name = "expense_date", nullable = false)
+    private LocalDate expenseDate;
+
     /**
      * MANY-TO-ONE UNIDIRECTIONAL
      * Child Entity
@@ -63,10 +71,12 @@ public class Expenses {
      * Lombok Builder
      */
     @Builder
-    public Expenses(String description, Double amount, ExpenseCategory category, Customer customer) {
+    public Expenses(String description, Double amount, ExpenseCategory category, LocalDate expenseDate,
+            Customer customer) {
         this.description = description;
         this.amount = amount;
         this.category = category;
+        this.expenseDate = expenseDate;
         this.customer = customer;
     }
 }

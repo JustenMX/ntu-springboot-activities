@@ -1,5 +1,7 @@
 package sg.edu.ntu.simpleexpenses.config;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -38,7 +40,7 @@ public class DataLoader {
 
                 // Create and save expenses associated with john
                 Expenses expenses1 = Expenses.builder().description("Drinks out with friends").amount(25.00)
-                                .category(ExpenseCategory.FOOD).customer(john).build();
+                                .category(ExpenseCategory.FOOD).customer(john).expenseDate(LocalDate.now()).build();
                 expensesRepository.save(expenses1);
 
                 Expenses expenses2 = Expenses.builder()
@@ -46,7 +48,7 @@ public class DataLoader {
                                 .amount(15.00)
                                 .category(ExpenseCategory.FOOD)
                                 .customer(john)
-                                .build();
+                                .expenseDate(LocalDate.now()).build();
                 expensesRepository.save(expenses2);
 
                 Expenses expenses3 = Expenses.builder()
@@ -54,7 +56,7 @@ public class DataLoader {
                                 .amount(30.00)
                                 .category(ExpenseCategory.FITNESS)
                                 .customer(john)
-                                .build();
+                                .expenseDate(LocalDate.now()).build();
                 expensesRepository.save(expenses3);
 
                 // Create and save expenses associated with jane
@@ -63,7 +65,7 @@ public class DataLoader {
                                 .amount(12.50)
                                 .category(ExpenseCategory.ENTERTAINMENT)
                                 .customer(jane)
-                                .build();
+                                .expenseDate(LocalDate.now()).build();
                 expensesRepository.save(expenses4);
 
                 Expenses expenses5 = Expenses.builder()
@@ -71,7 +73,7 @@ public class DataLoader {
                                 .amount(50.00)
                                 .category(ExpenseCategory.GROCERY)
                                 .customer(jane)
-                                .build();
+                                .expenseDate(LocalDate.now()).build();
                 expensesRepository.save(expenses5);
         }
 }

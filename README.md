@@ -1,6 +1,6 @@
 # NTU Software Engineering Spring Boot Activities
 
-This repository contains a collection of Spring Boot exercises and activities completed as part of the Software Engineering course at Nanyang Technological University (NTU). Each folder in this repository represents a different activity or exercise. **In addition to the course exercises, I've also included some of the [projects](#project-1:-springboot-expenses-tracker) I've independently developed.**
+This repository contains a collection of Spring Boot exercises and activities completed as part of the Software Engineering course at Nanyang Technological University (NTU). Each folder in this repository represents a different activity or exercise. **In addition to the course exercises, I've also included some of the [projects]("https://github.com/JustenMX/ntu-springboot-activities#project-1-springboot-expenses-tracker") I've independently developed.**
 
 ## Table of Contents
 

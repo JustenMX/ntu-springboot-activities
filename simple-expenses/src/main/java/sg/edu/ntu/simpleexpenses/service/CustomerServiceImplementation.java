@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import sg.edu.ntu.simpleexpenses.exception.OperationFailedException;
-import sg.edu.ntu.simpleexpenses.exception.ResourceNotFoundException;
+import sg.edu.ntu.simpleexpenses.exception.CustomerNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.Customer;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
 import sg.edu.ntu.simpleexpenses.repository.CustomerRepository;
@@ -34,10 +33,8 @@ public class CustomerServiceImplementation implements CustomerService {
 
     @Override
     public Expenses addExpensesToCustomer(Long id, Expenses expenses) {
-        Customer selectedCustomer = customerRepository.findById(id).orElse(null);
-        if (selectedCustomer == null) {
-            throw new ResourceNotFoundException("Customer not found");
-        }
+        Customer selectedCustomer = customerRepository.findById(id)
+                .orElseThrow(() -> new CustomerNotFoundException(id));
         expenses.setCustomer(selectedCustomer);
         return expensesRepository.save(expenses);
     }
@@ -45,27 +42,18 @@ public class CustomerServiceImplementation implements CustomerService {
     @Override
     public List<Customer> getAllCustomers() {
         List<Customer> allCustomers = customerRepository.findAll();
-        if (allCustomers.isEmpty()) {
-            throw new ResourceNotFoundException("customers not found");
-        }
         return allCustomers;
     }
 
     @Override
     public Customer getCustomer(Long id) {
-        Customer customer = customerRepository.findById(id).orElse(null);
-        if (customer == null) {
-            throw new ResourceNotFoundException("customer not found");
-        }
+        Customer customer = customerRepository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
         return customer;
     }
 
     @Override
     public Customer updateCustomer(Long id, Customer customer) {
-        Customer updateCustomer = customerRepository.findById(id).orElse(null);
-        if (updateCustomer == null) {
-            throw new OperationFailedException("failed to update customer");
-        }
+        Customer updateCustomer = customerRepository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
         updateCustomer.setFirstName(customer.getFirstName());
         updateCustomer.setLastName(customer.getLastName());
         updateCustomer.setEmail(customer.getEmail());

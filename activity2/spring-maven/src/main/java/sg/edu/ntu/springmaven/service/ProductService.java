@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import lombok.AllArgsConstructor;
 import sg.edu.ntu.springmaven.POJO.Product;
 import sg.edu.ntu.springmaven.exception.ProductNotCreatedException;
 import sg.edu.ntu.springmaven.exception.ProductNotFoundException;

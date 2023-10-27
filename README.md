@@ -1,13 +1,13 @@
 # NTU Software Engineering Spring Boot Activities
 
-This repository contains a collection of Spring Boot exercises and activities completed as part of the Software Engineering course at Nanyang Technological University (NTU). Each folder in this repository represents a different activity or exercise. **In addition to the course exercises, I've also included some of the [projects]("https://github.com/JustenMX/ntu-springboot-activities#project-1-springboot-expenses-tracker") I've independently developed.**
+This repository contains a collection of Spring Boot exercises and activities completed as part of the Software Engineering course at Nanyang Technological University (NTU). Each folder in this repository represents a different activity or exercise.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
 - [Activities List](#activities-list)
-- [Contributing](#contributing)
+- [Project 1 - Expense Tracker](#project-1-springboot-expenses-tracker)
 - [License](#license)
 
 ## Introduction
@@ -69,58 +69,81 @@ In addition to the course exercises, I've also included some of the projects I'v
 
 ### Phase 1: Initial API Setup
 
-- **Status:** Completed
+**Status:** Completed
 
-Developed a small-scale expenses API with various functions and endpoints within the controller layer.
+- Developed a small-scale expenses API with various functions and endpoints within the controller layer.
 
 ### Phase 2: Code Refactoring and Architecture Enhancement
 
-- **Status:** Completed
+**Status:** Completed
 
-Refactored the codebase to adopt a structured architecture with data, service, and controller layers. Leveraged new concepts and practices to improve the project's scalability and maintainability.
+- Refactored the codebase to adopt a structured architecture with data, service, and controller layers.
+- Leveraged new concepts and practices to improve the project's scalability and maintainability.
 
 ### Phase 3: Data Layer Implementation
 
-- **Status:** Completed
+**Status:** Completed
 
-Created the ExpensesRepository for data management, initially using an ArrayList. Explored basic data handling techniques as the project took its initial shape.
+- Created the ExpensesRepository for data management, initially using an ArrayList.
+- Explored basic data handling techniques as the project took its initial shape.
 
 ### Phase 4: API Documentation with Swagger and OpenAPI
 
-- **Status:** Completed
+**Status:** Completed
 
-Set up comprehensive API documentation using Swagger and OpenAPI. Improved project documentation practices and enhanced user experience.
+- Set up comprehensive API documentation using Swagger and OpenAPI.
+- Improved project documentation practices and enhanced user experience.
 
 ![Swagger](assets/scr1.png)
 
 ### Phase 5: Code Refinement and Expansion
 
-- **Status:** Completed
+**Status:** Completed
 
-Continued code refactoring with a focus on improving the controller layer's readability. Embraced newfound knowledge to expand the project's capabilities and structure.
+- Continued code refactoring with a focus on improving the controller layer's readability.
+- Embraced newfound knowledge to expand the project's capabilities and structure.
 
 ### Phase 6: Integration with In-Memory H2 Database and JPA
 
-- **Status:** Completed
+**Status:** Completed
 
-Integrated the project with an in-memory H2 database using Java Persistence API (JPA). Gained insights into database integration, further expanding the project's scope.
+- Integrated the project with an in-memory H2 database using Java Persistence API (JPA).
+- Gained insights into database integration, further expanding the project's scope.
 
 ### Phase 7: Further Code Refactoring
 
-- **Status:** Completed
+**Status:** Completed
 
-Conducted additional code refactoring across various aspects of the project. Added a new Interface class and established OneToMany and ManyToOne relationships to current Expenses and Customer classes. Added nested routes to add Expenses to Customer classes. Applied enhanced coding practices and patterns to accommodate new learnings.
+- Conducted additional code refactoring across various aspects of the project.
+- Added a new Interface class and established OneToMany and ManyToOne relationships to current Expenses and Customer classes.
+- Added nested routes to add Expenses to Customer classes.
+- Applied enhanced coding practices and patterns to accommodate new learnings.
 
 ![Customer](assets/scr2.png)
 ![Swagger](assets/scr3.png)
 
 ### Phase 8: Future Steps
 
-- **Status:** Ongoing
+**Status:** Completed
 
-Planned future steps, including integrating the project with a PostgreSQL database for enhanced scalability and persistence.
+In this phase, significant enhancements were made to improve the project's scalability, error handling, and data persistence capabilities.
 
-Please click on the links to navigate to each activity's folder and explore the related materials.
+- Implemented new exception handlers to refine error management and provide more informative responses to clients.
+- Updated the global exception handler to ensure consistent and meaningful error responses across all endpoints.
+- Adjusted the controller and service layers to seamlessly integrate with the new exception handlers, improving overall error handling flow.
+- Initiated the migration process from H2 to PostgreSQL, laying the foundation for a more robust and scalable data storage solution.
+- Utilized Hibernate annotations and features to optimize the mapping of Customer and Expense fields for improved data retrieval and manipulation.
+
+### Phase 9: Testing and Quality Assurance
+
+**Status:** Work in Progress
+
+In Phase 9, the focus shifts towards ensuring the reliability and quality of the application through rigorous unit and integration testing.
+
+- Implementing unit tests using jUnit to validate the functionality of individual components, ensuring they perform as expected.
+- Leveraging Mockito for integration testing to simulate interactions between components and evaluate their behavior under various scenarios.
+
+> Please click on the links to navigate to each activity's folder and explore the related materials.
 
 <!-- ## Contributing
 

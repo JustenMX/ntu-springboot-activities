@@ -3,6 +3,8 @@ package sg.edu.ntu.simpleexpenses.pojo;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,19 +20,18 @@ import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-// import lombok.NoArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
-// import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
+@Data
 @Entity
 @Table(name = "expenses")
-// @RequiredArgsConstructor
-// @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Expenses {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

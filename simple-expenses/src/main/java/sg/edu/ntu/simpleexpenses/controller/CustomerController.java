@@ -22,6 +22,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import sg.edu.ntu.simpleexpenses.exception.CustomerNotFoundException;
 import sg.edu.ntu.simpleexpenses.pojo.Customer;
 import sg.edu.ntu.simpleexpenses.pojo.Expenses;
@@ -51,13 +52,12 @@ public class CustomerController {
     @ApiResponse(responseCode = "200", description = "Successfully created customer", content = @Content(schema = @Schema(implementation = Customer.class)))
     @ApiResponse(responseCode = "400", description = "Customer not created", content = @Content(schema = @Schema(implementation = CustomerNotFoundException.class)))
     @PostMapping
-    public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer) {
-        Customer newCustomer = customerService.addCustomer(customer);
+    public ResponseEntity<Customer> addCustomer(@Valid @RequestBody Customer customer) {
 
-        logger.info("Added new customer [ID: {}, Name: {} {}]", newCustomer.getId(), newCustomer.getFirstName(),
-                newCustomer.getLastName());
+        logger.info("Added new customer [ID: {}, Name: {} {}]", customer.getId(), customer.getFirstName(),
+                customer.getLastName());
 
-        return new ResponseEntity<>(newCustomer, HttpStatus.OK);
+        return new ResponseEntity<>(customerService.addCustomer(customer), HttpStatus.CREATED);
     }
 
     /**
